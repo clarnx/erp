@@ -56,7 +56,7 @@ module.exports = {
           // components
           ["^@/components", "^@/pages"],
           // redux store
-          ["^@/store"],
+          ["^@/redux"],
           // Other imports
           ["^@/"],
           // relative paths up until 3 level
