@@ -18,7 +18,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       children,
       className,
       disabled: buttonDisabled,
-      isLoading,
+      isLoading = true,
       variant = "primary",
       ...rest
     },
@@ -32,15 +32,15 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         type="button"
         disabled={disabled}
         className={clsxm(
-          "inline-flex items-center rounded px-4 py-2 font-medium",
+          "inline-flex items-center rounded px-4 py-2 font-secondary font-semibold",
           "focus:outline-none focus-visible:ring focus-visible:ring-primary-500",
           "shadow-sm",
           "transition-colors duration-75",
           [
             variant === "primary" && [
-              "bg-slate-900 text-white",
+              "bg-primary-600 text-white",
               "border border-primary-600",
-              "hover:bg-slate-900 hover:text-white",
+              "hover:bg-primary-600 hover:text-white",
               "active:bg-primary-500",
               "disabled:bg-primary-400 disabled:hover:bg-primary-400",
             ],
@@ -54,13 +54,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       >
         {isLoading && (
           <div
+            data-testid="loading-icon"
             className={clsxm(
-              "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2",
-              {
-                "text-white": ["primary", "dark"].includes(variant),
-                "text-black": ["light"].includes(variant),
-                "text-primary-500": ["outline", "ghost"].includes(variant),
-              }
+              "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white"
             )}
           >
             <ImSpinner2 className="animate-spin" />
