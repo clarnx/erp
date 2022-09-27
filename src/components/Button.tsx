@@ -18,7 +18,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       children,
       className,
       disabled: buttonDisabled,
-      isLoading = true,
+      isLoading,
       variant = "primary",
       ...rest
     },
