@@ -4,6 +4,8 @@ import React, { useState } from "react";
 
 import logger from "@/utils/logger";
 
+import Button from "@/components/Button";
+
 type UserForm = {
   accountNum: string;
   email: string;
@@ -128,12 +130,9 @@ const LoginPage: NextPage = () => {
           </div>
 
           <div>
-            <button
-              type="submit"
-              className="group relative flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-            >
+            <Button type="submit" className="w-full justify-center">
               Sign in
-            </button>
+            </Button>
           </div>
         </form>
       </div>
