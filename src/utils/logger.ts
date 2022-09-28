@@ -12,7 +12,8 @@ const logger = (object: unknown, comment?: string): void => {
   console.log(
     "%c ============== INFO LOG ============== \n",
     "color: #22D3EE",
-    `${comment ?? "Value"}: ${object}`
+    `${comment ?? "Value: "}`,
+    object
   );
 };
 
