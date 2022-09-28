@@ -1,34 +1,153 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# TypeScript React Native
+
+## Table of Contents
+
+- [Technologies](#technologies)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Recommended Workflow](#recommended-workflow)
+- [Naming Convention](#naming-convention)
+- [Future Plans](#future-plans)
+
+## Technologies
+
+- [NodeJS](https://nodejs.org/)
+- Next.js (React)(https://nextjs.org/)
+- Next Auth(https://next-auth.js.org/)
+- TypeScript(https://www.typescriptlang.org/)
+- Jest(https://jestjs.io/)
+- React Testing Library(https://testing-library.com/docs/react-testing-library/intro/)
+- Storybook(https://storybook.js.org/)
+- Redux Toolkit(https://redux-toolkit.js.org/)
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
-npm run dev
-# or
+# Install dependencies for the host
+yarn install
+
+# Install git hooks
+yarn prepare
+
+# Start the application
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Commit Changes
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```bash
+# Identify changes you want to commit
+git add .
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+# Husky will trigger, select appropriate choices for commit message and after finalizing commit message, upon arriving to vim just type :wq and enter to save
+git commit
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+# Push changes to remote branch if changes has been finalized
+git push origin branch-name
+```
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+| Name                  | Description                                         |
+| --------------------- | --------------------------------------------------- |
+| **src/components**/\* | All app wise common components                      |
+| **src/config**/\*     | Any app level environment configs should go here.   |
+| **src/constants**/\*  | Common constant values                              |
+| **src/generators**/\* | Plop generator templates                            |
+| **src/hooks**/\*      | Custom react hooks                                  |
+| **src/redux**/\*      | Redux store that stores all global state of the app |
+| **src/pages**/\*      | App pages                                           |
+| **src/styles**/\*     | Common/Global styles                                |
+| **src/utils**/\*      | Utility functions                                   |
+| .comminlintrc.json    | Commit lint configuration                           |
+| .editorconfig         | Editor configuration                                |
+| .eslintrc.js          | Eslint configuration                                |
+| .env.example          | Project environment variables                       |
+| .eslintignore         | Folder and files ignored by eslint                  |
+| .gitignore            | Folder and files ignored by git.                    |
+| .prettierignore       | Folder and files ignored by prettier.               |
+| .prettierrc           | Prettier configuration                              |
+| .jest.config.js       | Jest configuration                                  |
+| .jest.setup.js        | Jest setup                                          |
+| app.json              | App configurations by expo                          |
+| App.tsx               | Entry point for the applicatinon                    |
+| next.config.js        | Next.js configuration                               |
+| plopfile.js           | Plop implementation                                 |
+| postcss.config.js     | PostCSS config                                      |
+| tailwind.config.js    | Tailwind config                                     |
+| package.json          | NPM dependencies.                                   |
+| tsconfig.json         | Contains typescript configuration for this project. |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Storybook
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```bash
+# Opens storybook
+yarn storybook
+```
 
-## Deploy on Vercel
+## Sample Environment File
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project contains a `.env.example` file that you can use. Rename it to `.env` and modify the contents to your needs.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Code Scaffolding
+
+Run `yarn plop` to generate a new component and select a location on where to store the generated story.
+
+### Components ( if needed )
+
+Check the `components` folder if you have neccessary components needed to finish your screen. If not, you can define the component in the screen itself or add any components here if you think it is reusable between screens.
+
+1. Create a folder for the component in `src/components`. The name should be able to give others the idea what the component is about.
+1. Create a TSX file called `index.tsx` under that folder. This file will define the component itself.
+1. (Optional) You can also create a component within a component for complex components.
+
+### Pages
+
+The screen defines a collection of components. You can define some components here if you think it is only usable within the screen but preferrably components should be resuable. Any logic, API request, or retrieving from redux store should be defined here.
+
+1. Create a folder under `src/pages`. Make sure the name is concise enough to understand what the component is about.
+1. Create a TSX called `index.tsx`. This file will define the page itself.
+
+## Naming Convention
+
+### For variables, files and folders
+
+Use `camelCase` for files and folders that are not components or pages and `camelCase` for variables within files. The only exception would be the component and pages names which should be `PascalCase`.
+
+```
+// File name is Button.tsx
+
+const Button: React.FC = () => {
+  const propName = 'Sample'
+  return <EditProfile name={propName} />;
+};
+```
+
+In some cases, we include the file `functionality` in its file name in the format:
+
+`<file-name>-<functionality>.<extension>`
+`<file-name><functionality>.<extension>`
+
+Non-component/screen file/folder naming example:
+
+- auth.ts
+- users.ts
+- rootReducer.ts
+
+Pages/component file/folder naming example:
+
+- Button
+- Sidebar
+- Login
+
+## Deployment
+
+Under construction
+
+### Production
+
+Under construction
+
+### Test
+
+Under construction
