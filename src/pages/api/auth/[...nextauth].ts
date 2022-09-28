@@ -4,6 +4,7 @@ import CredentialProvider from "next-auth/providers/credentials";
 const mockUserData: User[] = [
   {
     id: "1",
+    accountNum: "1234",
     email: "test@test.com",
     name: "Test User",
   },
