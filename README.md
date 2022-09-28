@@ -1,13 +1,17 @@
-# TypeScript React Native
+# Carlisle ERP
 
 ## Table of Contents
 
 - [Technologies](#technologies)
 - [Getting Started](#getting-started)
+- [Commit Changes](#commit-changes)
 - [Project Structure](#project-structure)
-- [Recommended Workflow](#recommended-workflow)
+- [Storybook](#project-structure)
+- [Sample Environment File](#sample-environment-file)
+- [Code Scaffolding](#code-scaffolding)
 - [Naming Convention](#naming-convention)
-- [Future Plans](#future-plans)
+- [Deployment](#deployment)
+- [Testing](#testing)
 
 ## Technologies
 
@@ -89,7 +93,9 @@ yarn storybook
 
 This project contains a `.env.example` file that you can use. Rename it to `.env` and modify the contents to your needs.
 
-### Code Scaffolding
+## Code Scaffolding
+
+### Story Creation
 
 Run `yarn plop` to generate a new component and select a location on where to store the generated story.
 
@@ -144,10 +150,6 @@ Pages/component file/folder naming example:
 
 Under construction
 
-### Production
-
-Under construction
-
-### Test
+## Testing
 
 Under construction
