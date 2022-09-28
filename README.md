@@ -12,13 +12,13 @@
 ## Technologies
 
 - [NodeJS](https://nodejs.org/)
-- Next.js (React)(https://nextjs.org/)
-- Next Auth(https://next-auth.js.org/)
-- TypeScript(https://www.typescriptlang.org/)
-- Jest(https://jestjs.io/)
-- React Testing Library(https://testing-library.com/docs/react-testing-library/intro/)
-- Storybook(https://storybook.js.org/)
-- Redux Toolkit(https://redux-toolkit.js.org/)
+- [Next.js (React)](https://nextjs.org/)
+- [Next Auth](https://next-auth.js.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Jest](https://jestjs.io/)
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+- [Storybook](https://storybook.js.org/)
+- [Redux Toolkit](https://redux-toolkit.js.org/)
 
 ## Getting Started
 
