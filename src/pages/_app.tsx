@@ -12,6 +12,7 @@ import { GeneratePageTitle } from "@/utils/helpers";
 import { site } from "@/config";
 
 import AuthProvider from "@/components/AuthProvider";
+import Layout from "@/components/Layout";
 
 import store from "@/redux/store";
 
@@ -43,7 +44,9 @@ const MyApp: NextPage<AppProps<{ session: any }>> = ({
       <SessionProvider session={session}>
         <Provider store={store}>
           <AuthProvider>
-            <Component {...pageProps} />
+            <Layout>
+              <Component {...pageProps} />
+            </Layout>
           </AuthProvider>
         </Provider>
       </SessionProvider>

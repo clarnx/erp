@@ -27,7 +27,7 @@
 }
 
 @layer components {
-  .nav-link-active,
+  .nav-link-active > svg > path,
   .nav-link:hover > svg > path {
     fill: var(--color-gray-100);
   }
