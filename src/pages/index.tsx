@@ -1,7 +1,14 @@
 import type { NextPage } from "next";
+import React from "react";
 
-const Home: NextPage = () => {
-  return <div>Home</div>;
+import Sidebar from "@/components/Sidebar";
+
+const HomePage: NextPage = () => {
+  return (
+    <main>
+      <Sidebar />
+    </main>
+  );
 };
 
-export default Home;
+export default HomePage;

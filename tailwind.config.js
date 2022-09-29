@@ -33,7 +33,6 @@ module.exports = {
           600: withOpacityValue("--tw-color-gray-600"),
           700: withOpacityValue("--tw-color-gray-700"),
           800: withOpacityValue("--tw-color-gray-800"),
-          900: withOpacityValue("--tw-color-gray-900"),
         },
         white: "#fff",
       },
