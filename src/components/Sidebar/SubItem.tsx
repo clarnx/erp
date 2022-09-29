@@ -26,7 +26,7 @@ const SubItem: FC<SidebarLink> = ({
     ? "hover:bg-gray-600 hover:text-gray-100"
     : `${
         isSubLink
-          ? "before:absolute before:-left-4 before:top-1/4 before:h-1/2 before:rounded-sm before:border-2 before:bg-gray-400"
+          ? "before:absolute before:-left-4 before:top-1/4 before:h-6 before:rounded-sm before:border-2 before:bg-gray-400"
           : ""
       } hover:text-gray-100`;
 

@@ -36,14 +36,14 @@ export const links: SidebarLink[] = [
           {
             id: 1,
             url: "/",
-            text: "order processing",
+            text: "work with client",
           },
           {
             id: 2,
             url: "/",
-            text: "order review, pictures, reports",
+            text: "customer receipt header / footer",
           },
-          { id: 3, url: "/", text: "accounting" },
+          { id: 3, url: "/", text: "change weekly shipping option" },
         ],
       },
       {
@@ -51,38 +51,12 @@ export const links: SidebarLink[] = [
         url: "/",
         text: "order review, pictures, reports",
         isSubLink: true,
-        subLinks: [
-          {
-            id: 1,
-            url: "/",
-            text: "order processing",
-          },
-          {
-            id: 2,
-            url: "/",
-            text: "order review, pictures, reports",
-          },
-          { id: 3, url: "/", text: "accounting" },
-        ],
       },
       {
         id: 3,
         url: "/",
         text: "accounting",
         isSubLink: true,
-        subLinks: [
-          {
-            id: 1,
-            url: "/",
-            text: "order processing",
-          },
-          {
-            id: 2,
-            url: "/",
-            text: "order review, pictures, reports",
-          },
-          { id: 3, url: "/", text: "accounting" },
-        ],
       },
     ],
   },
