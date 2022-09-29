@@ -10,7 +10,7 @@ export default {
 } as ComponentMeta<typeof Loading>;
 
 const Template: ComponentStory<typeof Loading> = (args) => (
-  <Loading {...args}>Click me</Loading>
+  <Loading {...args} />
 );
 
 export const Default = Template.bind({});
