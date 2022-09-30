@@ -1,17 +1,12 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import * as React from "react";
 
-import Sidebar from "@/components/Sidebar/Sidebar";
+import Sidebar from "@/components/Sidebar";
 
 export default {
   title: "Components/Sidebar/Sidebar",
   component: Sidebar,
-  argTypes: {
-    // override React.ReactNode type with this
-    // children: {
-    // control: { type: 'text' },
-    // },
-  },
+  argTypes: {},
 } as ComponentMeta<typeof Sidebar>;
 
 const Template: ComponentStory<typeof Sidebar> = (args) => (

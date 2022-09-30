@@ -1,0 +1,62 @@
+import Image from "next/image";
+import { FC } from "react";
+
+const Header: FC = () => {
+  return (
+    <header
+      className="sticky top-0 ml-64 flex items-center justify-between px-12 py-6"
+      data-testid="header"
+    >
+      <div className="flex flex-grow items-center p-1 py-2">
+        <div>
+          <p className="font-bold text-gray-800">Hi User,</p>
+          <p className="font-bold text-gray-400">Welcome back!</p>
+        </div>
+
+        <div className="relative ml-14 text-gray-600 focus-within:text-gray-400">
+          <input
+            type="search"
+            className="w-72 rounded-xl border-none bg-gray-50 py-3 pr-9 text-sm text-gray-800 focus:outline-none"
+            placeholder="Search"
+            data-testid="search-input"
+          />
+
+          <span className="absolute inset-y-0 right-2 flex items-center pl-2">
+            <button type="submit" className="p-1 focus:outline-none">
+              <div className="mt-1">
+                <Image
+                  src="/svg/Search.svg"
+                  height={21}
+                  width={21}
+                  alt="Search Icon"
+                />
+              </div>
+            </button>
+          </span>
+        </div>
+      </div>
+
+      <button className="flex items-center gap-2 rounded-md bg-gray-50 py-3 px-3">
+        <div className="h-8 w-8 rounded-full bg-gray-400" />
+
+        <div className="flex flex-col text-start">
+          <span className="text-xs font-medium text-gray-800">Test User</span>
+          <span className="text-xs font-medium text-gray-600">041045</span>
+        </div>
+
+        <div className="ml-8 flex flex-col">
+          <Image
+            src="/svg/Chevron.svg"
+            alt="Chevron"
+            height={7}
+            width={7}
+            className="rotate-180"
+          />
+          <Image src="/svg/Chevron.svg" alt="Chevron" height={7} width={7} />
+        </div>
+      </button>
+    </header>
+  );
+};
+
+export default Header;

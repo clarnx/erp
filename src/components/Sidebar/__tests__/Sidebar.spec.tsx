@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import Sidebar from "../Sidebar";
 
 describe("Sidebar", () => {
-  it("renders a Sidebar", () => {
+  it("renders the Sidebar component", () => {
     render(<Sidebar />);
 
     const testId = screen.getByTestId("sidebar");
