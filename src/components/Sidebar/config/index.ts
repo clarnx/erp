@@ -1,15 +1,3 @@
-import Collection from "@/assets/svg/Collection.svg";
-import ContactUs from "@/assets/svg/ContactUs.svg";
-import Home from "@/assets/svg/Home.svg";
-import Incentives from "@/assets/svg/Incentives.svg";
-import Link from "@/assets/svg/Link.svg";
-import Orders from "@/assets/svg/Orders.svg";
-import Outlet from "@/assets/svg/Outlet.svg";
-import Section from "@/assets/svg/Section.svg";
-import University from "@/assets/svg/University.svg";
-import Warning from "@/assets/svg/Warning.svg";
-import YourShow from "@/assets/svg/YourShow.svg";
-
 import type { SidebarLink } from "../types";
 
 export const links: SidebarLink[] = [
@@ -18,13 +6,13 @@ export const links: SidebarLink[] = [
     url: "/",
     text: "home",
     isMainLink: true,
-    Icon: Home,
+    icon: "Home",
   },
   {
     id: 2,
     url: "/orders",
     text: "orders",
-    Icon: Orders,
+    icon: "Orders",
     isMainLink: true,
     subLinks: [
       {
@@ -69,62 +57,62 @@ export const links: SidebarLink[] = [
     url: "/incentives",
     text: "incentives",
     isMainLink: true,
-    Icon: Incentives,
+    icon: "Incentives",
   },
   {
     id: 4,
     url: "/your-show",
     text: "your show",
     isMainLink: true,
-    Icon: YourShow,
+    icon: "YourShow",
   },
   {
     id: 5,
     url: "/collection",
     text: "collection",
     isMainLink: true,
-    Icon: Collection,
+    icon: "Collection",
   },
   {
     id: 6,
     url: "/university",
     text: "carlisle university",
     isMainLink: true,
-    Icon: University,
+    icon: "University",
   },
   {
     id: 7,
     url: "/style-section",
     text: "style section",
     isMainLink: true,
-    Icon: Section,
+    icon: "Section",
   },
   {
     id: 8,
     url: "/policies",
     text: "policies",
     isMainLink: true,
-    Icon: Warning,
+    icon: "Warning",
   },
   {
     id: 9,
     url: "/weblinks",
     text: "weblinks",
     isMainLink: true,
-    Icon: Link,
+    icon: "Link",
   },
   {
     id: 10,
     url: "/outlet",
     text: "outlet",
     isMainLink: true,
-    Icon: Outlet,
+    icon: "Outlet",
   },
   {
     id: 11,
     url: "/contact-us",
     text: "contact us",
     isMainLink: true,
-    Icon: ContactUs,
+    icon: "ContactUs",
   },
 ];

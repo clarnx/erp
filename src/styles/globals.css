@@ -27,8 +27,9 @@
 }
 
 @layer components {
-  .nav-link-active > svg > path,
-  .nav-link:hover > svg > path {
-    fill: var(--color-gray-100);
+  .nav-link-active > span > img,
+  .nav-link:hover > span > img {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(25deg)
+      brightness(150%) contrast(87%);
   }
 }

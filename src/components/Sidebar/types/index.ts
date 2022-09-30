@@ -10,7 +10,7 @@ export type SidebarLink = {
   id: number;
   url: string;
   text: string;
-  Icon?: React.ElementType;
+  icon?: string;
   isMainLink: boolean;
   isSubLink?: boolean;
   subLinks?: Sublink[];
