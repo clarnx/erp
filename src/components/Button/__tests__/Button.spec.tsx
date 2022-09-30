@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import Button from "../Button";
 
 describe("Button", () => {
-  it("renders a Button", () => {
+  it("renders the Button component", () => {
     render(<Button>Click me</Button>);
 
     const heading = screen.getByText(/Click me/i);

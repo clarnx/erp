@@ -6,12 +6,7 @@ import Button from "@/components/Button";
 export default {
   title: "Components/Button",
   component: Button,
-  argTypes: {
-    // override React.ReactNode type with this
-    // children: {
-    // control: { type: 'text' },
-    // },
-  },
+  argTypes: {},
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = (args) => (
