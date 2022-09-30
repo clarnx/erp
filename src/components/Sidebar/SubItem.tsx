@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { FC, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
+
+import clsxm from "@/utils/clsxm";
 
 import Chevron from "@/assets/svg/Chevron.svg";
 
@@ -17,46 +19,48 @@ const SubItem: FC<SidebarLink> = ({
 }) => {
   const router = useRouter();
 
-  const [subnav, setSubnav] = useState<boolean>(false);
+  const [isCollapsed, setIsCollapsed] = useState<boolean>(false);
 
-  const showSubnav: React.MouseEventHandler<HTMLDivElement> = (event) => {
-    event.stopPropagation();
-    event.preventDefault();
+  const hasParentLink = subLinks && router.pathname.includes(url);
+  const isActive = router.pathname === url || hasParentLink;
+  const isActiveSubLink = isSubLink && isActive;
+  const isActiveMainLink = isMainLink && isActive;
+  const isActiveChildLink = !isMainLink && !isSubLink && isActive;
+  const routeLink = !subLinks ? url : "";
 
-    setSubnav(!subnav);
+  useEffect(() => {
+    if (hasParentLink) setIsCollapsed(true);
+    if (!isActive && subLinks) setIsCollapsed(false);
+  }, [hasParentLink, isActive, subLinks]);
+
+  const showCollapsed: React.MouseEventHandler<HTMLAnchorElement> = () => {
+    if (subLinks) setIsCollapsed((prev) => !prev);
   };
-
-  const isActive = router.pathname === url;
-
-  const mainLinkStyle = isMainLink
-    ? "hover:bg-gray-600"
-    : `${
-        isSubLink && isActive
-          ? "before:absolute before:-left-4 before:top-1/4 before:h-6 before:rounded-sm before:border-2 before:bg-gray-400"
-          : ""
-      }`;
 
   return (
     <>
-      <div className="relative">
-        <Link href={url}>
+      <div className="relative" data-testid="sub-item">
+        <Link href={routeLink}>
           <a
             key={id}
-            className={`nav-link mt-3 flex transform items-center rounded-md px-4 py-2 capitalize text-gray-400 transition-colors duration-200 hover:text-gray-100 ${mainLinkStyle} ${
-              isMainLink && isActive
-                ? "nav-link-active bg-gray-600 text-gray-100"
-                : !isMainLink && !isSubLink && isActive
-                ? "text-gray-100"
-                : ""
-            }`}
+            onClick={showCollapsed}
+            className={clsxm(
+              "nav-link mt-3 flex transform items-center rounded-md px-4 py-2 capitalize text-gray-400 transition-colors duration-200 hover:text-gray-100",
+              isMainLink && "hover:bg-gray-600",
+              isActiveMainLink && "nav-link-active bg-gray-600 text-gray-100",
+              isActiveChildLink && "text-gray-100",
+              isActiveSubLink &&
+                "before:absolute before:-left-4 before:top-1/4 before:h-6 before:rounded-sm before:border-2 before:bg-gray-400"
+            )}
           >
-            {Icon && <Icon className="h-5 w-5" />}
+            {Icon ? <Icon className="h-5 w-5" /> : null}
+
             <span className="mx-4 font-primary font-medium">{text}</span>
 
-            <div className="ml-auto" onClick={showSubnav}>
-              {subLinks && subnav ? (
+            <div className="ml-auto">
+              {subLinks && isCollapsed ? (
                 <Chevron className=" h-3 w-3 rotate-180 transition" />
-              ) : subLinks && !subnav ? (
+              ) : subLinks && !isCollapsed ? (
                 <Chevron className="h-3 w-3 transition" />
               ) : null}
             </div>
@@ -64,7 +68,7 @@ const SubItem: FC<SidebarLink> = ({
         </Link>
       </div>
 
-      {subnav &&
+      {isCollapsed &&
         subLinks?.map((link) => {
           return (
             <SubItem

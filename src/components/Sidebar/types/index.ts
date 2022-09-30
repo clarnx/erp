@@ -3,7 +3,6 @@ export type Sublink = {
   url: string;
   text: string;
   isSubLink?: boolean;
-  isChildLink?: boolean;
   subLinks?: Sublink[];
 };
 
@@ -14,6 +13,5 @@ export type SidebarLink = {
   Icon?: React.ElementType;
   isMainLink: boolean;
   isSubLink?: boolean;
-  isChildLink?: boolean;
   subLinks?: Sublink[];
 };

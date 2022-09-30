@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 
 import Logo from "@/assets/svg/Logo.svg";
 import Logout from "@/assets/svg/Logout.svg";
@@ -6,9 +6,9 @@ import Logout from "@/assets/svg/Logout.svg";
 import { links } from "./config";
 import SubItem from "./SubItem";
 
-const Sidebar = () => {
+const Sidebar: FC = () => {
   return (
-    <aside className="fixed top-0 left-0 ">
+    <aside className="fixed top-0 left-0 " data-testid="sidebar">
       <div className="relative flex h-screen min-h-screen w-64 flex-col overflow-y-auto border-r bg-gray-700 px-4 py-8">
         <div className="flex w-full justify-center">
           <Logo className="h-4 w-28 justify-center" />

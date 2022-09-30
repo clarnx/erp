@@ -16,6 +16,10 @@ const customJestConfig = {
 
   testEnvironment: "jest-environment-jsdom",
 
+  transform: {
+    "\\.svg$": "svg-jest",
+  },
+
   /**
    * Absolute imports and Module Path Aliases
    */
@@ -25,5 +29,17 @@ const customJestConfig = {
   },
 };
 
+const jestConfig = async () => {
+  const nextJestConfig = await createJestConfig(customJestConfig)();
+  return {
+    ...nextJestConfig,
+    moduleNameMapper: {
+      // Workaround to put our SVG stub first
+      "\\.svg": "<rootDir>/public/fileMock.js",
+      ...nextJestConfig.moduleNameMapper,
+    },
+  };
+};
+
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
-module.exports = createJestConfig(customJestConfig);
+module.exports = jestConfig;
