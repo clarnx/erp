@@ -1,5 +1,6 @@
-import Image from "next/image";
 import { FC } from "react";
+
+import Icon from "../Icon";
 
 const Header: FC = () => {
   return (
@@ -24,12 +25,7 @@ const Header: FC = () => {
           <span className="absolute inset-y-0 right-2 flex items-center pl-2">
             <button type="submit" className="p-1 focus:outline-none">
               <div className="mt-1">
-                <Image
-                  src="/svg/Search.svg"
-                  height={21}
-                  width={21}
-                  alt="Search Icon"
-                />
+                <Icon src="/svg/Search.svg" height={21} width={21} />
               </div>
             </button>
           </span>
@@ -47,14 +43,13 @@ const Header: FC = () => {
         </div>
 
         <div className="ml-8 flex flex-col">
-          <Image
+          <Icon
             src="/svg/Chevron.svg"
-            alt="Chevron"
             height={7}
             width={7}
             className="rotate-180"
           />
-          <Image src="/svg/Chevron.svg" alt="Chevron" height={7} width={7} />
+          <Icon src="/svg/Chevron.svg" height={7} width={7} />
         </div>
       </button>
     </header>
