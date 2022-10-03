@@ -4,7 +4,7 @@ import * as React from "react";
 import Header from "@/components/Header/Header";
 
 export default {
-  title: "Components/Header/Header",
+  title: "Components/Layout/Header",
   component: Header,
   argTypes: {},
 } as ComponentMeta<typeof Header>;

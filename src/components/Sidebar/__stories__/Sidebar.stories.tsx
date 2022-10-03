@@ -4,7 +4,7 @@ import * as React from "react";
 import Sidebar from "@/components/Sidebar";
 
 export default {
-  title: "Components/Sidebar/Sidebar",
+  title: "Components/Layout/Sidebar",
   component: Sidebar,
   argTypes: {},
 } as ComponentMeta<typeof Sidebar>;
