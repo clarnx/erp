@@ -14,7 +14,7 @@ describe("Sidebar", () => {
   it("renders the Sidebar logo", () => {
     render(<Sidebar />);
 
-    const logo = screen.getByAltText("logo");
+    const logo = screen.getByAltText("Logo");
 
     expect(logo).toBeInTheDocument();
   });

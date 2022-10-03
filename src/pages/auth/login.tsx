@@ -130,11 +130,7 @@ const LoginPage: NextPage = () => {
           </div>
 
           <div>
-            <Button
-              type="submit"
-              variant="secondary"
-              className="justify-center"
-            >
+            <Button type="submit" className="w-full justify-center">
               Sign in
             </Button>
           </div>

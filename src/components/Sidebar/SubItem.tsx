@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { FC, useEffect, useState } from "react";
@@ -6,6 +5,7 @@ import React, { FC, useEffect, useState } from "react";
 import clsxm from "@/utils/clsxm";
 
 import type { SidebarLink } from "./types";
+import Icon from "../Icon";
 
 const SubItem: FC<SidebarLink> = ({
   id,
@@ -59,29 +59,22 @@ const SubItem: FC<SidebarLink> = ({
             )}
           >
             {icon ? (
-              <Image
-                src={`/svg/${icon}.svg`}
-                alt={icon}
-                height={19}
-                width={19}
-              />
+              <Icon src={`/svg/${icon}.svg`} height={19} width={19} />
             ) : null}
 
             <span className="mx-4 font-primary font-medium">{text}</span>
 
             <div className="ml-auto">
               {subLinks && isCollapsed ? (
-                <Image
+                <Icon
                   src="/svg/Chevron.svg"
-                  alt="Chevron"
                   height={12}
                   width={12}
                   className="rotate-180 transition"
                 />
               ) : subLinks && !isCollapsed ? (
-                <Image
+                <Icon
                   src="/svg/Chevron.svg"
-                  alt="Chevron"
                   height={12}
                   width={12}
                   className="transition"
