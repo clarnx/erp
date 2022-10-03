@@ -32,8 +32,13 @@ const SubItem: FC<SidebarLink> = ({
     if (!isActive && subLinks) setIsCollapsed(false);
   }, [hasParentLink, isActive, subLinks]);
 
-  const showCollapsed: React.MouseEventHandler<HTMLAnchorElement> = () => {
-    if (subLinks) setIsCollapsed((prev) => !prev);
+  const showCollapsed: React.MouseEventHandler<HTMLAnchorElement> = (event) => {
+    if (subLinks) {
+      event.preventDefault();
+      event.stopPropagation();
+
+      setIsCollapsed((prev) => !prev);
+    }
   };
 
   return (
@@ -44,12 +49,13 @@ const SubItem: FC<SidebarLink> = ({
             key={id}
             onClick={showCollapsed}
             className={clsxm(
-              "nav-link mt-3 flex transform items-center rounded-md px-4 py-2 capitalize text-gray-400 transition-colors duration-200 hover:text-gray-100",
-              isMainLink && "hover:bg-gray-600",
-              isActiveMainLink && "nav-link-active bg-gray-600 text-gray-100",
-              isActiveChildLink && "text-gray-100",
+              "nav-link mt-3 flex transform items-center rounded-md px-4 py-2 capitalize text-primary-300 transition-colors duration-200 hover:text-primary-100",
+              isMainLink && "hover:bg-tertiary-200",
+              isActiveMainLink &&
+                "nav-link-active bg-tertiary-200 text-primary-100",
+              isActiveChildLink && "text-primary-100",
               isActiveSubLink &&
-                "before:absolute before:-left-4 before:top-1/4 before:h-6 before:rounded-sm before:border-2 before:bg-gray-400"
+                "before:absolute before:-left-4 before:top-1/4 before:h-6 before:rounded-sm before:border-2 before:bg-primary-200"
             )}
           >
             {icon ? (

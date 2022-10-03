@@ -9,14 +9,14 @@ const Header: FC = () => {
     >
       <div className="flex flex-grow items-center p-1 py-2">
         <div>
-          <p className="font-bold text-gray-800">Hi User,</p>
-          <p className="font-bold text-gray-400">Welcome back!</p>
+          <p className="font-bold text-tertiary-300">Hi User,</p>
+          <p className="font-bold text-primary-300">Welcome back!</p>
         </div>
 
-        <div className="relative ml-14 text-gray-600 focus-within:text-gray-400">
+        <div className="relative ml-14 text-tertiary-200 focus-within:text-primary-300">
           <input
             type="search"
-            className="w-72 rounded-xl border-none bg-gray-50 py-3 pr-9 text-sm text-gray-800 focus:outline-none"
+            className="w-72 rounded-xl border-none bg-primary-50 py-3 pr-9 text-sm text-tertiary-300 focus:outline-none"
             placeholder="Search"
             data-testid="search-input"
           />
@@ -36,12 +36,14 @@ const Header: FC = () => {
         </div>
       </div>
 
-      <button className="flex items-center gap-2 rounded-md bg-gray-50 py-3 px-3">
-        <div className="h-8 w-8 rounded-full bg-gray-400" />
+      <button className="flex items-center gap-2 rounded-md bg-primary-50 py-3 px-3">
+        <div className="h-8 w-8 rounded-full bg-primary-300" />
 
         <div className="flex flex-col text-start">
-          <span className="text-xs font-medium text-gray-800">Test User</span>
-          <span className="text-xs font-medium text-gray-600">041045</span>
+          <span className="text-xs font-medium text-tertiary-300">
+            Test User
+          </span>
+          <span className="text-xs font-medium text-tertiary-200">041045</span>
         </div>
 
         <div className="ml-8 flex flex-col">

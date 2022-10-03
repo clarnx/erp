@@ -6,24 +6,34 @@
 @tailwind utilities;
 
 :root {
-  --tw-color-gray-50: 239 241 242;
-  --tw-color-gray-100: 238 238 238;
-  --tw-color-gray-200: 162 168 173;
-  --tw-color-gray-300: 137 140 143;
-  --tw-color-gray-400: 109 114 117;
-  --tw-color-gray-500: 105 107 111;
-  --tw-color-gray-600: 61 58 59;
-  --tw-color-gray-700: 39 36 37;
-  --tw-color-gray-800: 33 34 35;
-  --color-gray-50: rgb(var(--tw-color-gray-50)); /* #EFF1F2 */
-  --color-gray-100: rgb(var(--tw-color-gray-100)); /* #EEEEEE */
-  --color-gray-200: rgb(var(--tw-color-gray-200)); /* #A2A8AD */
-  --color-gray-300: rgb(var(--tw-color-gray-300)); /* #898C8F */
-  --color-gray-400: rgb(var(--tw-color-gray-400)); /* #6D7275 */
-  --color-gray-500: rgb(var(--tw-color-gray-500)); /* #696C6F */
-  --color-gray-600: rgb(var(--tw-color-gray-600)); /* #3D3A3B */
-  --color-gray-700: rgb(var(--tw-color-gray-700)); /* #272425 */
-  --color-gray-800: rgb(var(--tw-color-gray-800)); /* #212223 */
+  --tw-color-primary-50: 239 241 242;
+  --tw-color-primary-100: 238 238 238;
+  --tw-color-primary-200: 176 183 195;
+  --tw-color-primary-300: 109 114 117;
+  --tw-color-primary-400: 39 36 37;
+  --color-primary-50: rgb(var(--tw-color-primary-50)); /* #EFF1F2 */
+  --color-primary-100: rgb(var(--tw-color-primary-100)); /* #EEEEEE */
+  --color-primary-200: rgb(var(--tw-color-primary-200)); /* #B0B7C3 */
+  --color-primary-300: rgb(var(--tw-color-primary-300)); /* #6D7275 */
+  --color-primary-400: rgb(var(--tw-color-primary-400)); /* #272425 */
+
+  --tw-color-secondary-50: 173 167 162;
+  --tw-color-secondary-100: 137 140 143;
+  --tw-color-secondary-200: 105 107 111;
+  --tw-color-secondary-300: 255 86 48 1;
+  --color-secondary-50: rgb(var(--tw-color-secondary-50)); /* #ADA7A2 */
+  --color-secondary-100: rgb(var(--tw-color-secondary-100)); /* #898C8F */
+  --color-secondary-200: rgb(var(--tw-color-secondary-200)); /* #696C6F */
+  --color-secondary-300: rgb(var(--tw-color-secondary-300)); /* #FF5630 */
+
+  --tw-color-tertiary-50: 206 212 217;
+  --tw-color-tertiary-100: 186 195 200;
+  --tw-color-tertiary-200: 61 58 59;
+  --tw-color-tertiary-300: 33 34 35;
+  --color-tertiary-50: rgb(var(--tw-color-tertiary-50)); /* #CED4D9 */
+  --color-tertiary-100: rgb(var(--tw-color-tertiary-100)); /* #BAC3C8 */
+  --color-tertiary-200: rgb(var(--tw-color-tertiary-200)); /* #3D3A3B */
+  --color-tertiary-300: rgb(var(--tw-color-tertiary-300)); /* #212223 */
 }
 
 @layer components {
