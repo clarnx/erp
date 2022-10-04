@@ -17,7 +17,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        primary: ["Gotham", ...fontFamily.sans],
+        primary: ["Gotham", "sans-serif"],
         secondary: ["Inter", ...fontFamily.sans],
         tertiary: ["Open Sans", ...fontFamily.sans],
       },

@@ -1,6 +1,7 @@
 import { FC } from "react";
 
 import Icon from "../Icon";
+import Typography from "../Typography";
 
 const Header: FC = () => {
   return (
@@ -10,8 +11,15 @@ const Header: FC = () => {
     >
       <div className="flex flex-grow items-center p-1 py-2">
         <div>
-          <p className="font-bold text-tertiary-300">Hi User,</p>
-          <p className="font-bold text-primary-300">Welcome back!</p>
+          <Typography preset="subheading">Hi User,</Typography>
+          <Typography
+            color="text-primary-300"
+            variant="h4"
+            size="text-base"
+            className="font-bold"
+          >
+            Welcome back!
+          </Typography>
         </div>
 
         <div className="relative ml-14 text-tertiary-200 focus-within:text-primary-300">
@@ -36,10 +44,22 @@ const Header: FC = () => {
         <div className="h-8 w-8 rounded-full bg-primary-300" />
 
         <div className="flex flex-col text-start">
-          <span className="text-xs font-medium text-tertiary-300">
+          <Typography
+            color="text-tertiary-300"
+            variant="p"
+            size="text-xs"
+            className="font-medium"
+          >
             Test User
-          </span>
-          <span className="text-xs font-medium text-tertiary-200">041045</span>
+          </Typography>
+          <Typography
+            color="text-tertiary-200"
+            variant="p"
+            size="text-xs"
+            className="font-light"
+          >
+            041045
+          </Typography>
         </div>
 
         <div className="ml-8 flex flex-col">

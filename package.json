@@ -14,7 +14,7 @@
     "test": "jest",
     "format": "prettier -w .",
     "format:check": "prettier -c .",
-    "prepare": "husky install",
+    "prepare": "husky install && chmod ug+x .husky/*",
     "storybook": "BROWSER=none start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },

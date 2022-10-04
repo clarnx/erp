@@ -6,6 +6,7 @@ import clsxm from "@/utils/clsxm";
 
 import type { SidebarLink } from "./types";
 import Icon from "../Icon";
+import Typography from "../Typography";
 
 const SubItem: FC<SidebarLink> = ({
   id,
@@ -53,16 +54,23 @@ const SubItem: FC<SidebarLink> = ({
               isMainLink && "hover:bg-tertiary-200",
               isActiveMainLink &&
                 "nav-link-active bg-tertiary-200 text-primary-100",
-              isActiveChildLink && "text-primary-100",
+              isActiveChildLink && "nav-link-active text-primary-100",
               isActiveSubLink &&
-                "before:absolute before:-left-4 before:top-1/4 before:h-6 before:rounded-sm before:border-2 before:bg-primary-200"
+                "nav-link-active before:absolute before:-left-4 before:top-1/4 before:h-6 before:rounded-sm before:border-2 before:bg-primary-200"
             )}
           >
             {icon ? (
               <Icon src={`/svg/${icon}.svg`} height={19} width={19} />
             ) : null}
 
-            <span className="mx-4 font-primary font-medium">{text}</span>
+            <Typography
+              color="text-primary-300"
+              variant="p"
+              size="text-base"
+              className="mx-4 font-medium"
+            >
+              {text}
+            </Typography>
 
             <div className="ml-auto">
               {subLinks && isCollapsed ? (

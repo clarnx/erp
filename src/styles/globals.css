@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap");
-@import url("https://cdn.statically.io/gist/mfd/f3d96ec7f0e8f034cc22ea73b3797b59/raw/fad2f254369fb54250260077a4c87391a6280c52/gotham.css");
 
 @tailwind base;
 @tailwind components;
@@ -36,10 +35,37 @@
   --color-tertiary-300: rgb(var(--tw-color-tertiary-300)); /* #212223 */
 }
 
+@layer base {
+  @font-face {
+    font-family: Gotham;
+    font-weight: 700;
+    src: url(/fonts/Gotham/GothamBold.ttf) format("ttf");
+  }
+  @font-face {
+    font-family: Gotham;
+    font-weight: 500;
+    src: url(/fonts/Gotham/GothamMedium.ttf) format("ttf");
+  }
+  @font-face {
+    font-family: Gotham;
+    font-weight: 300;
+    src: url(/fonts/Gotham/GothamLight.ttf) format("ttf");
+  }
+}
+
 @layer components {
   .nav-link-active > span > img,
   .nav-link:hover > span > img {
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(25deg)
       brightness(150%) contrast(87%);
+  }
+
+  .nav-link:hover > p,
+  .nav-link-active > p {
+    transition-property: color, background-color, border-color,
+      text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    color: rgb(var(--tw-color-primary-100) / var(--tw-text-opacity));
   }
 }
