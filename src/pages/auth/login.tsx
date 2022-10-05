@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import logger from "@/utils/logger";
 
 import Button from "@/components/Button";
+import Input from "@/components/Input";
 
 type UserForm = {
   accountNum: string;
@@ -53,53 +54,54 @@ const LoginPage: NextPage = () => {
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
           <div className="rounded-md shadow-sm">
             <div className="mb-4">
-              <label htmlFor="account-number" className="sr-only">
-                Account number
-              </label>
-              <input
+              <Input
+                label="Account Number"
                 id="account-number"
                 name="account-number"
-                type="number"
+                type="text"
                 value={userInfo.accountNum}
                 required
                 onChange={handleChange("accountNum")}
-                className="relative block w-full appearance-none rounded-none border border-improbable px-3 py-2 text-blackOut placeholder-shishaCoal focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                className="relative block w-full border-transparent px-3 py-2 text-blackOut placeholder-shishaCoal focus:border-transparent focus:ring-0 sm:text-sm"
                 placeholder="Account number"
               />
+              <span id="errMsg"></span>
             </div>
 
             <div className="mb-4">
-              <label htmlFor="email-address" className="sr-only">
-                Email address
-              </label>
-              <input
-                id="email-address"
+              <Input
+                label="Email Address"
+                icon={{
+                  src: "",
+                  height: 0,
+                  width: 0,
+                }}
+                id="email"
                 name="email"
                 type="email"
                 value={userInfo.email}
                 autoComplete="email"
                 required
                 onChange={handleChange("email")}
-                className="relative block w-full appearance-none rounded-none border border-improbable px-3 py-2 text-blackOut placeholder-shishaCoal focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                className="relative block w-full border-transparent px-3 py-2 text-blackOut placeholder-shishaCoal focus:border-transparent focus:ring-0 sm:text-sm"
                 placeholder="Email address"
               />
+              <span id="errMsg"></span>
             </div>
 
             <div>
-              <label htmlFor="password" className="sr-only">
-                Password
-              </label>
-              <input
+              <Input
+                label="Password"
                 id="password"
                 name="password"
                 type="password"
                 value={userInfo.password}
-                onChange={handleChange("password")}
                 autoComplete="current-password"
                 required
-                className="relative block w-full appearance-none rounded-none border border-improbable px-3 py-2 text-blackOut placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                className="relative block w-full border-transparent px-3 py-2 text-blackOut placeholder-shishaCoal focus:border-transparent focus:ring-0 sm:text-sm"
                 placeholder="Password"
               />
+              <span id="errMsg"></span>
             </div>
           </div>
 
