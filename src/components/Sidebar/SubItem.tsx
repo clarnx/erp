@@ -50,13 +50,13 @@ const SubItem: FC<SidebarLink> = ({
             key={id}
             onClick={showCollapsed}
             className={clsxm(
-              "nav-link mt-3 flex transform items-center rounded-md px-4 py-2 capitalize text-primary-300 transition-colors duration-200 hover:text-primary-100",
-              isMainLink && "hover:bg-tertiary-200",
+              "nav-link mt-3 flex transform items-center rounded-md px-4 py-2 capitalize text-improbable transition-colors duration-200 hover:text-superSilver",
+              isMainLink && "hover:bg-shishaCoal",
               isActiveMainLink &&
-                "nav-link-active bg-tertiary-200 text-primary-100",
-              isActiveChildLink && "nav-link-active text-primary-100",
+                "nav-link-active bg-shishaCoal text-superSilver",
+              isActiveChildLink && "nav-link-active text-superSilver",
               isActiveSubLink &&
-                "nav-link-active before:absolute before:-left-4 before:top-1/4 before:h-6 before:rounded-sm before:border-2 before:bg-primary-200"
+                "nav-link-active before:absolute before:-left-4 before:top-1/4 before:h-6 before:rounded-sm before:border-2 before:bg-adirondack"
             )}
           >
             {icon ? (
@@ -64,7 +64,7 @@ const SubItem: FC<SidebarLink> = ({
             ) : null}
 
             <Typography
-              color="text-primary-300"
+              color="text-improbable"
               variant="p"
               size="text-base"
               className="mx-4 font-medium"

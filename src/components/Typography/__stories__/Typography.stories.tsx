@@ -17,7 +17,7 @@ const TypographyDefault: ComponentStory<typeof Typography> = (args) => (
 
 const TypographyCustom: ComponentStory<typeof Typography> = (args) => (
   <Typography
-    color="text-primary-300"
+    color="text-improbable"
     variant="h4"
     size="text-base"
     className="font-bold"

@@ -30,16 +30,16 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
     const variants: ClassValue[] = [
       variant === "primary" && [
-        "bg-primary-400 text-white",
-        "border border-primary-400",
-        "hover:bg-tertiary-300 hover:text-white",
-        "active:bg-tertiary-200",
+        "bg-nero text-white",
+        "border border-nero",
+        "hover:bg-blackOut hover:text-white",
+        "active:bg-shishaCoal",
       ],
       variant === "secondary" && [
-        "bg-tertiary-50 text-tertiary-200",
-        "border border-tertiary-50",
-        "hover:bg-tertiary-100 hover:text-tertiary-200",
-        "active:bg-primary-200",
+        "bg-polarDrift text-shishaCoal",
+        "border border-polarDrift",
+        "hover:bg-icicles hover:text-shishaCoal",
+        "active:bg-adirondack",
       ],
     ];
 
@@ -50,12 +50,12 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         disabled={disabled}
         className={clsxm(
           "inline-flex items-center rounded-2xl font-secondary font-semibold",
-          "focus:outline-none focus-visible:ring focus-visible:ring-tertiary-300",
+          "focus:outline-none focus-visible:ring focus-visible:ring-blackOut",
           "shadow-sm",
           "transition-colors duration-75",
           sizes,
           variants,
-          "disabled:cursor-not-allowed disabled:border disabled:border-tertiary-50 disabled:bg-tertiary-50 disabled:text-tertiary-200 disabled:opacity-75",
+          "disabled:cursor-not-allowed disabled:border disabled:border-polarDrift disabled:bg-polarDrift disabled:text-shishaCoal disabled:opacity-75",
           isLoading &&
             "relative text-transparent transition-none hover:text-transparent disabled:cursor-wait",
           className

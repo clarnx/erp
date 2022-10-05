@@ -7,7 +7,7 @@ const Typography: FC<PropsWithChildren<TypgoraphyProps>> = (props) => {
   const {
     preset = "custom",
     variant = "p",
-    color = "text-primary-400",
+    color = "text-nero",
     textAlign = "text-left",
     fontFamily = "font-primary",
     className,
