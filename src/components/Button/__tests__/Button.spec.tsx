@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 
 import Button from "../Button";
 
@@ -25,5 +25,17 @@ describe("Button", () => {
     const loading = screen.getByTestId("loading-icon");
 
     expect(loading).toBeInTheDocument();
+  });
+
+  it("should trigger the Button onClick", () => {
+    const handleClick = jest.fn();
+
+    render(<Button onClick={handleClick}>Click me</Button>);
+
+    const button = screen.getByText(/Click me/i);
+
+    fireEvent.click(button);
+
+    expect(handleClick).toBeCalledTimes(1);
   });
 });
