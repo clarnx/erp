@@ -6,10 +6,11 @@ const typographyPresets: TypographyPresets = [
     props: {
       variant: "h1",
       color: "text-nero",
-      size: "text-3xl", // 26px
+      size: "text-[1.625rem]", // 26px
       textAlign: "text-left",
       fontFamily: "font-primary",
       className: "font-bold", // 700
+      lineHeight: "leading-[1.555rem]", // 24.88px
     },
   },
   {
@@ -21,6 +22,7 @@ const typographyPresets: TypographyPresets = [
       textAlign: "text-left",
       fontFamily: "font-primary",
       className: "font-bold", // 700
+      lineHeight: "leading-[1.196rem]", //19.14px
     },
   },
   {
@@ -32,6 +34,7 @@ const typographyPresets: TypographyPresets = [
       textAlign: "text-left",
       fontFamily: "font-primary",
       className: "font-medium", // 500
+      lineHeight: "leading-[1.077rem]", //17.23px
     },
   },
   {
@@ -43,6 +46,7 @@ const typographyPresets: TypographyPresets = [
       textAlign: "text-left",
       fontFamily: "font-primary",
       className: "font-bold", // 700
+      lineHeight: "leading-[0.957rem]", //15.31px
     },
   },
   {
@@ -54,6 +58,7 @@ const typographyPresets: TypographyPresets = [
       textAlign: "text-left",
       fontFamily: "font-primary",
       className: "font-medium", // 500
+      lineHeight: "leading-[0.9rem]", //14.40px
     },
   },
   {
@@ -65,6 +70,7 @@ const typographyPresets: TypographyPresets = [
       textAlign: "text-left",
       fontFamily: "font-primary",
       className: "font-light", // 400
+      lineHeight: "leading-[0.968rem]", //15.48px
     },
   },
   {
@@ -76,6 +82,7 @@ const typographyPresets: TypographyPresets = [
       textAlign: "text-left",
       fontFamily: "font-primary",
       className: "font-medium", // 500
+      lineHeight: "leading-[0.957rem]", //15.31px
     },
   },
 ];

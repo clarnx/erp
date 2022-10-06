@@ -6,13 +6,14 @@ type TailwindTextSizes =
   | "text-base"
   | "text-lg"
   | "text-xl"
-  | "text-3xl";
+  | "text-[1.625rem]";
 
 type TypographyFieldsType = {
   variant?: keyof JSX.IntrinsicElements;
   size?: TailwindTextSizes;
   textAlign?: TailwindTextAlign;
   fontFamily?: TailwindFontFamily;
+  lineHeight?: string;
   color?: string;
   className?: string;
 };
@@ -27,7 +28,7 @@ type Preset =
   | "paragraph"
   | "regular";
 
-type TypgoraphyProps = {
+type TypographyProps = {
   preset?: Preset;
 } & TypographyFieldsType;
 
@@ -42,8 +43,8 @@ export type {
   TailwindFontFamily,
   TailwindTextAlign,
   TailwindTextSizes,
-  TypgoraphyProps,
   TypographyFieldsType,
   TypographyPreset,
   TypographyPresets,
+  TypographyProps,
 };

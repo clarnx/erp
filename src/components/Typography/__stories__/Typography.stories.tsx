@@ -10,25 +10,24 @@ export default {
 } as ComponentMeta<typeof Typography>;
 
 const TypographyDefault: ComponentStory<typeof Typography> = (args) => (
-  <Typography preset="subheading" {...args}>
-    Text is in here
-  </Typography>
+  <Typography {...args} />
 );
 
 const TypographyCustom: ComponentStory<typeof Typography> = (args) => (
-  <Typography
-    color="text-improbable"
-    variant="h4"
-    size="text-base"
-    className="font-bold"
-    {...args}
-  >
-    Text is in here
-  </Typography>
+  <Typography {...args} />
 );
 
 export const Default = TypographyDefault.bind({});
-TypographyDefault.args = {};
+Default.args = {
+  preset: "subheading",
+  children: "Text is in here",
+};
 
 export const Custom = TypographyCustom.bind({});
-Custom.args = {};
+Custom.args = {
+  color: "text-improbable",
+  variant: "h4",
+  size: "text-base",
+  className: "font-bold",
+  children: "Text is in here",
+};
