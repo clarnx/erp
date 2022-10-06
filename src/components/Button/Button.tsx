@@ -22,10 +22,13 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const disabled = isLoading || buttonDisabled;
 
     const sizes: ClassValue[] = [
-      size === "xs" && "px-11 py-3",
-      size === "sm" && "px-14 py-3",
-      size === "md" && "px-24 py-3",
-      size === "lg" && "px-60 py-4",
+      size === "xs" && "px-11 py-[0.938rem] h-[3.188rem] min-w-[8.875rem]",
+      size === "sm" &&
+        "px-[3.188rem] py-[0.938rem] h-[3.188rem] min-w-[10.938rem]",
+      size === "md" &&
+        "px-[4.438rem] py-[0.938rem] h-[3.188rem] min-w-[15.375rem]",
+      size === "lg" &&
+        "px-[13.625rem] py-[1.25rem] h-[3.625rem] min-w-[33.75rem]",
     ];
 
     const variants: ClassValue[] = [
@@ -49,7 +52,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         type="button"
         disabled={disabled}
         className={clsxm(
-          "inline-flex items-center rounded-2xl font-secondary font-semibold",
+          "inline-flex items-center justify-center rounded-2xl font-secondary font-semibold",
           "focus:outline-none focus-visible:ring focus-visible:ring-blackOut",
           "shadow-sm",
           "transition-colors duration-75",
