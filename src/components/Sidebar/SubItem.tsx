@@ -24,7 +24,7 @@ const SubItem: FC<SidebarLink> = ({
   const hasParentLink = subLinks && router.pathname.includes(url);
   const isActive = router.pathname === url || hasParentLink;
   const isActiveSubLink = isSubLink && isActive;
-  const isActiveMainLink = isMainLink && isActive;
+  const isActiveMainLink = isMainLink && router.pathname === url;
   const isActiveChildLink = !isMainLink && !isSubLink && isActive;
   const routeLink = !subLinks ? url : "";
 
@@ -50,9 +50,9 @@ const SubItem: FC<SidebarLink> = ({
             key={id}
             onClick={showCollapsed}
             className={clsxm(
-              "nav-link mt-3 flex transform items-center rounded-md px-4 py-2 capitalize text-improbable transition-colors duration-200 hover:text-superSilver",
+              "nav-link mt-[0.563rem] flex min-h-[2.875rem] transform items-center rounded-md px-4 py-[0.625rem] capitalize text-whisper transition-colors duration-200 hover:text-superSilver",
               isMainLink && "hover:bg-shishaCoal",
-              isActiveMainLink &&
+              (isActiveMainLink || isActiveChildLink) &&
                 "nav-link-active bg-shishaCoal text-superSilver",
               isActiveChildLink && "nav-link-active text-superSilver",
               isActiveSubLink &&
@@ -64,7 +64,7 @@ const SubItem: FC<SidebarLink> = ({
             ) : null}
 
             <Typography
-              color="text-improbable"
+              color="text-whisper"
               variant="p"
               size="text-base"
               className="mx-4 font-medium"

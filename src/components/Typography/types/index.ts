@@ -1,6 +1,7 @@
 type TailwindFontFamily = "font-primary" | "font-secondary" | "font-tertiary";
 type TailwindTextAlign = "text-left" | "text-right" | "text-center";
 type TailwindTextSizes =
+  | "text-[0.563rem]"
   | "text-xs"
   | "text-sm"
   | "text-base"

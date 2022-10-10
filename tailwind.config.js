@@ -38,6 +38,7 @@ module.exports = {
         silverback: withOpacityValue("--tw-color-silverback"),
         disable: withOpacityValue("--tw-color-disable"),
         whiteSmoke: withOpacityValue("--tw-color-white-smoke"),
+        whisper: withOpacityValue("--tw-color-whisper"),
         white: "#fff",
       },
     },
