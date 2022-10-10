@@ -56,7 +56,7 @@ const SubItem: FC<SidebarLink> = ({
                 "nav-link-active bg-shishaCoal text-superSilver",
               isActiveChildLink && "nav-link-active text-superSilver",
               isActiveSubLink &&
-                "nav-link-active before:absolute before:-left-4 before:top-1/4 before:h-6 before:rounded-sm before:border-2 before:bg-adirondack"
+                "nav-link-active before:absolute before:-left-[0.4rem] before:top-1/4 before:h-6 before:rounded-sm before:border-2 before:bg-adirondack"
             )}
           >
             {icon ? (
