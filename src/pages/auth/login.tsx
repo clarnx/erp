@@ -51,6 +51,7 @@ const LoginPage: NextPage = () => {
             Sign in
           </h2>
         </div>
+
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
           <div className="rounded-md shadow-sm">
             <div className="mb-4">
@@ -62,12 +63,11 @@ const LoginPage: NextPage = () => {
                 value={userInfo.accountNum}
                 required
                 onChange={handleChange("accountNum")}
-                className="relative block w-full border-transparent px-3 py-2 text-blackOut placeholder-shishaCoal focus:border-transparent focus:ring-0 sm:text-sm"
+                className="block w-full border-transparent px-3 py-2 text-blackOut placeholder-shishaCoal focus:border-transparent focus:ring-0 sm:text-sm"
                 placeholder="Account number"
               />
               <span id="errMsg"></span>
             </div>
-
             <div className="mb-4">
               <Input
                 label="Email Address"
@@ -83,7 +83,7 @@ const LoginPage: NextPage = () => {
                 autoComplete="email"
                 required
                 onChange={handleChange("email")}
-                className="relative block w-full border-transparent px-3 py-2 text-blackOut placeholder-shishaCoal focus:border-transparent focus:ring-0 sm:text-sm"
+                className="block w-full border-transparent px-3 py-2 text-blackOut placeholder-shishaCoal focus:border-transparent focus:ring-0 sm:text-sm"
                 placeholder="Email address"
               />
               <span id="errMsg"></span>
@@ -98,7 +98,8 @@ const LoginPage: NextPage = () => {
                 value={userInfo.password}
                 autoComplete="current-password"
                 required
-                className="relative block w-full border-transparent px-3 py-2 text-blackOut placeholder-shishaCoal focus:border-transparent focus:ring-0 sm:text-sm"
+                onChange={handleChange("password")}
+                className="block w-full border-transparent px-3 py-2 text-blackOut placeholder-shishaCoal focus:border-transparent focus:ring-0 sm:text-sm"
                 placeholder="Password"
               />
               <span id="errMsg"></span>

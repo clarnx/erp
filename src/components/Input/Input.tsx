@@ -20,7 +20,7 @@ const Input: FC<InputProps> = ({
       )}
       <div
         className={clsxm(
-          "relative flex w-full flex-grow appearance-none items-center",
+          "flex w-full flex-grow appearance-none items-center",
           "rounded-2xl border p-1 py-2 px-3 text-blackOut",
           "focus-within:border-improbable sm:text-sm",
           hasError ? "border-poppySurprise" : "",

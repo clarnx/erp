@@ -1,0 +1,4 @@
+export const DEFAULT_POPUP = {
+  DEFAULT_ICON_HEIGHT: 69.16,
+  DEFAULT_ICON_WIDTH: 56,
+};
