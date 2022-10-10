@@ -93,12 +93,21 @@
   }
 
   ::-webkit-scrollbar {
-    height: 0.5rem;
+    width: 0.5rem;
     background-color: var(--color-polar-drift);
   }
 
   ::-webkit-scrollbar-thumb {
+    border-radius: 0.5rem;
     background-color: var(--color-belcher-metal);
+  }
+
+  .table-overflow::-webkit-scrollbar {
+    height: 0.5rem;
+  }
+
+  .table-overflow::-webkit-scrollbar-thumb {
+    border-radius: unset;
   }
 
   input::-webkit-outer-spin-button,

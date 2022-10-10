@@ -69,7 +69,7 @@ const VariationOne: FC<VariationTable> = ({ data }) => {
   );
 
   return (
-    <div className="table-container w-[66rem] flex-1 overflow-x-auto ">
+    <div className="table-overflow w-[66rem] flex-1 overflow-x-auto">
       <div className="inline-block min-w-full py-2">
         <div className="overflow-hidden">
           <table className="min-w-full table-auto">
