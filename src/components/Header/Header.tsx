@@ -6,7 +6,7 @@ import Typography from "../Typography";
 const Header: FC = () => {
   return (
     <header
-      className="sticky top-0 ml-64 flex items-center justify-between px-12 py-6"
+      className="sticky top-0 ml-64 flex items-center justify-between bg-white px-12 py-6"
       data-testid="header"
     >
       <div className="flex flex-grow items-center p-1 py-2">
