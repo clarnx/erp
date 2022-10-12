@@ -32,7 +32,7 @@ const Dropdown: FC<DropdownProps> = ({
       <button
         type="button"
         className={clsxm(
-          "border-belugal inline-flex w-full justify-center rounded-lg border bg-white px-4 py-2 text-sm font-medium text-improbable shadow-sm focus-within:border-improbable ",
+          "inline-flex w-full justify-center rounded-lg border border-beluga bg-white px-4 py-2 text-sm font-medium text-improbable shadow-sm focus-within:border-improbable ",
           hasError ? "border-poppySurprise" : ""
         )}
         id="menu-button"

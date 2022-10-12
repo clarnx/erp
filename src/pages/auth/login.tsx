@@ -51,7 +51,6 @@ const LoginPage: NextPage = () => {
             Sign in
           </h2>
         </div>
-
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
           <div className="rounded-md shadow-sm">
             <div className="mb-4">
@@ -88,7 +87,6 @@ const LoginPage: NextPage = () => {
               />
               <span id="errMsg"></span>
             </div>
-
             <div>
               <Input
                 label="Password"
