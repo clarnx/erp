@@ -1,7 +1,18 @@
 import mongoose, { Schema } from "mongoose";
 
 import { UserRole } from "./config";
-import type { IUser } from "./types";
+import type { IUser, IUserSecurityQuestion } from "./types";
+
+export const userSecurityQuestionSchema = new Schema<IUserSecurityQuestion>({
+  question: {
+    type: String,
+    required: true,
+  },
+  answer: {
+    type: String,
+    required: true,
+  },
+});
 
 export const userSchema = new Schema<IUser>(
   {
@@ -9,6 +20,14 @@ export const userSchema = new Schema<IUser>(
       type: Number,
       required: true,
       unique: true,
+    },
+    firstName: {
+      type: String,
+      required: true,
+    },
+    lastName: {
+      type: String,
+      required: true,
     },
     email: {
       type: String,
@@ -19,9 +38,18 @@ export const userSchema = new Schema<IUser>(
       type: String,
       required: true,
     },
+    securityQuestion: {
+      type: userSecurityQuestionSchema,
+      default: null,
+    },
     role: {
       type: String,
-      enum: [UserRole.Superadmin, UserRole.Stylish, UserRole.Partner],
+      enum: [
+        UserRole.Superadmin,
+        UserRole.Stylish,
+        UserRole.Agency,
+        UserRole.Partner,
+      ],
       default: UserRole.Stylish,
     },
     permission: {
