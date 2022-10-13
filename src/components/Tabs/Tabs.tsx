@@ -35,7 +35,7 @@ const Tabs: FC<TabProps> = ({ items }) => {
   return (
     <>
       <div className="border-b-[0.063rem]">
-        <nav className="h-[2.188rem]">
+        <nav className="h-[2.188rem]" data-testid="tab-component">
           <ol className="list-reset flex h-[1.625rem] w-full">
             {stateItems &&
               stateItems.map((link, i) => (
