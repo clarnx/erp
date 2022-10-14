@@ -104,15 +104,16 @@ Run `yarn plop` to generate a new component and select a location on where to st
 Check the `components` folder if you have neccessary components needed to finish your screen. If not, you can define the component in the screen itself or add any components here if you think it is reusable between screens.
 
 1. Create a folder for the component in `src/components`. The name should be able to give others the idea what the component is about.
-1. Create a TSX file called `index.tsx` under that folder. This file will define the component itself.
-1. (Optional) You can also create a component within a component for complex components.
+2. Create a TSX file called `index.tsx` under that folder. This file will define the component itself.
+3. (Optional) You can also create a component within a component for complex components.
 
 ### Pages
 
 The screen defines a collection of components. You can define some components here if you think it is only usable within the screen but preferrably components should be resuable. Any logic, API request, or retrieving from redux store should be defined here.
 
 1. Create a folder under `src/pages`. Make sure the name is concise enough to understand what the component is about.
-1. Create a TSX called `index.tsx`. This file will define the page itself.
+2. Create a root page file called `index.page.ts`. This file will define the page itself.
+3. Endpoints inside `src/pages/api` should also end with `.page.ts` extension.
 
 ## Naming Convention
 
