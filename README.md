@@ -104,7 +104,7 @@ Run `yarn plop` to generate a new component and select a location on where to st
 Check the `components` folder if you have neccessary components needed to finish your screen. If not, you can define the component in the screen itself or add any components here if you think it is reusable between screens.
 
 1. Create a folder for the component in `src/components`. The name should be able to give others the idea what the component is about.
-2. Create a TSX file called `index.tsx` under that folder. This file will define the component itself.
+2. Create a root component file called `index.ts` under that folder. This file will define the component itself.
 3. (Optional) You can also create a component within a component for complex components.
 
 ### Pages
