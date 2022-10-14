@@ -13,7 +13,7 @@ module.exports = {
     {
       type: "add",
       path: "src/{{getFolder path}}/__stories__/{{getName path}}.stories.tsx",
-      templateFile: "src/generators/Component.stories.tsx.hbs",
+      templateFile: "generators/storybook/Component.stories.tsx.hbs",
     },
   ],
 };

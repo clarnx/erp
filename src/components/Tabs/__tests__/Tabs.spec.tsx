@@ -31,7 +31,7 @@ describe("Tabs", () => {
       </div>
     );
 
-    const checkItem = screen.getByTestId("tab-component");
+    const checkItem = screen.getByTestId("tabs-component");
 
     expect(checkItem).toBeInTheDocument();
   });

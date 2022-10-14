@@ -4,10 +4,13 @@ type Icon = {
   src: string;
   height: number;
   width: number;
+  onClick?: () => void;
 };
 
 export type InputProps = {
   label?: string;
-  icon?: Icon;
+  leftIcon?: Icon;
+  rightIcon?: Icon;
   hasError?: boolean;
+  bgColor?: string;
 } & InputHTMLAttributes<HTMLInputElement>;

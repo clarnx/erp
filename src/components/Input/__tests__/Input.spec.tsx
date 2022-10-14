@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 
 import Input from "../Input";
 
@@ -10,22 +10,20 @@ describe("Input", () => {
         id="account-number"
         name="account-number"
         type="text"
-        disabled={false}
-        hasError={false}
-        value="example"
         required
-        onChange={() => undefined}
         className="relative block w-full border-transparent px-3 py-2 text-blackOut placeholder-shishaCoal focus:border-transparent focus:ring-0 sm:text-sm"
         placeholder="Account Number"
+        data-testid="input"
       />
     );
 
-    const inputAccountNumberPlaceHolder =
-      screen.getByPlaceholderText("Account Number");
-    const inputAccountNumberValue = screen.getByDisplayValue("example");
+    const inputValue = screen.getByTestId("input");
+    const placeholder = screen.getByPlaceholderText("Account Number");
 
-    expect(inputAccountNumberPlaceHolder).toBeInTheDocument();
-    expect(inputAccountNumberValue).toBeInTheDocument();
-    expect(inputAccountNumberValue).toBeRequired();
+    fireEvent.change(inputValue, { target: { value: "example" } });
+
+    expect(placeholder).toBeInTheDocument();
+    expect(inputValue).toBeInTheDocument();
+    expect(inputValue).toBeRequired();
   });
 });

@@ -1,9 +1,10 @@
+import bcrypt from "bcryptjs";
 import mongoose, { Schema } from "mongoose";
 
 import { UserRole } from "./config";
 import type { IUser, IUserSecurityQuestion } from "./types";
 
-export const userSecurityQuestionSchema = new Schema<IUserSecurityQuestion>({
+export const UserSecurityQuestionSchema = new Schema<IUserSecurityQuestion>({
   question: {
     type: String,
     required: true,
@@ -14,7 +15,7 @@ export const userSecurityQuestionSchema = new Schema<IUserSecurityQuestion>({
   },
 });
 
-export const userSchema = new Schema<IUser>(
+export const UserSchema = new Schema<IUser>(
   {
     accountNumber: {
       type: Number,
@@ -39,18 +40,18 @@ export const userSchema = new Schema<IUser>(
       required: true,
     },
     securityQuestion: {
-      type: userSecurityQuestionSchema,
+      type: UserSecurityQuestionSchema,
       default: null,
     },
     role: {
       type: String,
       enum: [
         UserRole.Superadmin,
-        UserRole.Stylish,
+        UserRole.Stylist,
         UserRole.Agency,
         UserRole.Partner,
       ],
-      default: UserRole.Stylish,
+      default: UserRole.Stylist,
     },
     permission: {
       type: String,
@@ -65,6 +66,20 @@ export const userSchema = new Schema<IUser>(
   }
 );
 
-const User = mongoose.models?.User || mongoose.model<IUser>("User", userSchema);
+UserSchema.pre("save", async function (next) {
+  if (!this.isModified("password")) {
+    next();
+  }
+
+  const salt = await bcrypt.genSalt(10);
+  this.password = await bcrypt.hash(this.password, salt);
+  next();
+});
+
+UserSchema.methods.matchPassword = async function (enteredPassword: string) {
+  return await bcrypt.compare(enteredPassword, this.password);
+};
+
+const User = mongoose.models?.User || mongoose.model<IUser>("User", UserSchema);
 
 export default User;

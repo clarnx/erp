@@ -15,8 +15,14 @@ const nextConfig = {
 
   swcMinify: true,
 
+  pageExtensions: ["page.ts", "page.tsx"],
+
   // SVGR
-  webpack(config) {
+  webpack(config, { webpack }) {
+    config.plugins.push(
+      new webpack.IgnorePlugin({ resourceRegExp: /\/__test__\// })
+    );
+
     config.module.rules.push({
       test: /\.svg$/i,
       issuer: /\.[jt]sx?$/,

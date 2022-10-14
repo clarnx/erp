@@ -32,6 +32,12 @@ export const storyIcons: StoryIcon[] = [
     width: 21,
   },
   {
+    label: "SlashedEye",
+    name: "/svg/SlashedEye.svg",
+    height: 21,
+    width: 21,
+  },
+  {
     label: "Incentives",
     name: "/svg/Incentives.svg",
     height: 21,
@@ -94,6 +100,24 @@ export const storyIcons: StoryIcon[] = [
   {
     label: "YourShow",
     name: "/svg/YourShow.svg",
+    height: 21,
+    width: 21,
+  },
+  {
+    label: "AccountNumber",
+    name: "/svg/AccountNumber.svg",
+    height: 21,
+    width: 21,
+  },
+  {
+    label: "Email",
+    name: "/svg/Email.svg",
+    height: 21,
+    width: 21,
+  },
+  {
+    label: "Password",
+    name: "/svg/Email.svg",
     height: 21,
     width: 21,
   },

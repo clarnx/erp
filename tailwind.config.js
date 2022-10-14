@@ -42,6 +42,7 @@ module.exports = {
         aliceBlue: withOpacityValue("--tw-color-alice-blue"),
         azure: withOpacityValue("--tw-color-azure"),
         ebonyClay: withOpacityValue("--tw-color-ebony-clay"),
+        cloudBurst: withOpacityValue("--tw-color-cloud-burst"),
         white: "#fff",
       },
     },

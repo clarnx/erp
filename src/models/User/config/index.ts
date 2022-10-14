@@ -1,6 +1,6 @@
 export enum UserRole {
   Superadmin = "Superadmin",
-  Stylish = "Stylish",
+  Stylist = "Stylist",
   Agency = "Agency",
   Partner = "Partner",
 }

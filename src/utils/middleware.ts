@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose, { ConnectOptions } from "mongoose";
 import type { NextApiHandler, NextApiRequest, NextApiResponse } from "next";
 
 /**
@@ -16,7 +16,10 @@ export const mongoHandler =
     }
 
     // Use new db connection
-    mongoose.connect(process.env.MONGODB_URI || "");
+    mongoose.connect(process.env.MONGODB_URI || "", {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    } as ConnectOptions);
     return await handler(req, res);
   };
 
@@ -26,5 +29,8 @@ export const mongoConnect = () => {
     return mongoose.connection.db;
   }
 
-  return mongoose.connect(process.env.MONGODB_URI || "");
+  return mongoose.connect(process.env.MONGODB_URI || "", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  } as ConnectOptions);
 };

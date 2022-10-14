@@ -5,7 +5,7 @@ export interface IUserSecurityQuestion extends Document {
   answer: string;
 }
 
-export interface IUser extends Document {
+export interface IUserDocument extends Document {
   accountNumber: number;
   email: string;
   firstName: string;
@@ -15,4 +15,8 @@ export interface IUser extends Document {
   permission?: string;
   securityQuestion?: IUserSecurityQuestion;
   status?: boolean;
+}
+
+export interface IUser extends IUserDocument {
+  matchPassword(enteredPassword: string): boolean;
 }

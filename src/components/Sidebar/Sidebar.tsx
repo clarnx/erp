@@ -1,3 +1,4 @@
+import { signOut } from "next-auth/react";
 import React, { FC } from "react";
 
 import { links } from "./config";
@@ -31,7 +32,10 @@ const Sidebar: FC = () => {
           </nav>
 
           <div className="mt-auto">
-            <button className="nav-link mt-[0.563rem] flex min-h-[2.875rem] transform cursor-pointer items-center rounded-md px-4 py-2 capitalize text-whisper transition-colors duration-200 hover:bg-shishaCoal hover:text-superSilver">
+            <button
+              className="nav-link mt-[0.563rem] flex min-h-[2.875rem] w-full transform cursor-pointer items-center rounded-md px-4 py-2 capitalize text-whisper transition-colors duration-200 hover:bg-shishaCoal hover:text-superSilver"
+              onClick={() => signOut()}
+            >
               <Icon src="/svg/Logout.svg" height={19} width={19} />
 
               <Typography

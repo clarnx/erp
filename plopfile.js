@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const inquirerFuzzyPath = require("inquirer-fuzzy-path");
-const storyGenerator = require("./src/generators/story");
+const storyGenerator = require("./generators/storybook/story");
 
 module.exports = function (plop) {
   plop.setGenerator("stories", storyGenerator);

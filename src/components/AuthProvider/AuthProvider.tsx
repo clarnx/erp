@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { useSession } from "next-auth/react";
-import { FC, PropsWithChildren, useEffect, useState } from "react";
+import { FC, Fragment, PropsWithChildren, useEffect, useState } from "react";
 
 import { whitelistPaths } from "@/config";
 
@@ -9,42 +9,39 @@ import { loginPath } from "@/constants/env";
 import Loading from "../Loading";
 
 export const AuthProvider: FC<PropsWithChildren> = ({ children }) => {
-  const { data: session } = useSession();
+  const { status, data: session } = useSession();
 
   const router = useRouter();
 
   const [isRouteChange, setIsRouteChange] = useState(false);
 
-  const isNotAuthenticated =
-    !whitelistPaths.includes(router.pathname) && !session;
-
   const handleStartChange = () => setIsRouteChange(true);
 
   const handleStopChange = () => setIsRouteChange(false);
+
+  const isWhitelistRoute = whitelistPaths.includes(router.pathname);
+  const isAuthenticated = session && isWhitelistRoute;
+  const isNotAuthenticated = !isWhitelistRoute && status === "unauthenticated";
 
   useEffect(() => {
     router.events.on("routeChangeStart", handleStartChange);
     router.events.on("routeChangeComplete", handleStopChange);
     router.events.on("routeChangeError", handleStopChange);
 
-    const checkAuth = () => {
-      if (isNotAuthenticated) router.replace(loginPath);
-    };
-
-    checkAuth();
+    if (isAuthenticated) router.replace("/");
+    if (isNotAuthenticated) router.replace(loginPath);
 
     return () => {
       router.events.off("routeChangeStart", handleStartChange);
       router.events.off("routeChangeComplete", handleStopChange);
       router.events.off("routeChangeError", handleStopChange);
     };
-  });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isNotAuthenticated, isAuthenticated]);
 
-  if (isRouteChange) {
-    return <Loading />;
-  }
+  if (isRouteChange || status === "loading") return <Loading />;
 
-  return <>{children}</>;
+  return <Fragment>{children}</Fragment>;
 };
 
 export default AuthProvider;

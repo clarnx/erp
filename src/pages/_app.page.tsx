@@ -1,5 +1,4 @@
 import { NextPage } from "next";
-import { AppProps } from "next/app";
 import { useRouter } from "next/router";
 import { SessionProvider } from "next-auth/react";
 import { NextSeo } from "next-seo";
@@ -9,14 +8,15 @@ import "@/styles/globals.css";
 
 import { GeneratePageTitle } from "@/utils/helpers";
 
-import { site } from "@/config";
+import { NextAppProps, site } from "@/config";
 
 import AuthProvider from "@/components/AuthProvider";
 import Layout from "@/components/Layout";
+import { LayoutOptions } from "@/components/Layout/config";
 
 import store from "@/redux/store";
 
-const MyApp: NextPage<AppProps<{ session: any }>> = ({
+const MyApp: NextPage<NextAppProps> = ({
   Component,
   pageProps: { session, ...pageProps },
 }) => {
@@ -44,9 +44,15 @@ const MyApp: NextPage<AppProps<{ session: any }>> = ({
       <SessionProvider session={session}>
         <Provider store={store}>
           <AuthProvider>
-            <Layout>
-              <Component {...pageProps} />
-            </Layout>
+            {Component.requireAuth ? (
+              <Layout>
+                <Component {...pageProps} />
+              </Layout>
+            ) : (
+              <Layout mode={LayoutOptions.NotAuthenticated}>
+                <Component {...pageProps} />
+              </Layout>
+            )}
           </AuthProvider>
         </Provider>
       </SessionProvider>
