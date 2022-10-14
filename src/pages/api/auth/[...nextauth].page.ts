@@ -40,6 +40,7 @@ export const authOptions: NextAuthOptions = {
             firstName: user?.firstName,
             lastName: user?.lastName,
             accountNumber: user?.accountNumber,
+            role: user?.role,
           };
 
           return response;
@@ -60,12 +61,23 @@ export const authOptions: NextAuthOptions = {
 
   callbacks: {
     jwt: ({ token, user }) => {
-      if (user) token.id = user.id;
-      return token;
+      return { ...token, ...user };
     },
     session: ({ session, token }) => {
       if (token) session.id = token.id;
-      return session;
+
+      const profile = {
+        email: token?.email,
+        firstName: token?.firstName,
+        lastName: token?.lastName,
+        accountNumber: token?.accountNumber,
+        role: token?.role,
+      };
+
+      return {
+        ...session,
+        profile,
+      };
     },
   },
 
