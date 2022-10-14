@@ -8,6 +8,7 @@ import clientPromise from "@/config/mongodb";
 
 import { LOGIN_ERRORS } from "@/pages/auth/login/config";
 
+import Role from "@/models/Role";
 import User from "@/models/User";
 import type { IUser } from "@/models/User/types";
 
@@ -23,10 +24,10 @@ export const authOptions: NextAuthOptions = {
       authorize: async (credentials) => {
         await mongoConnect();
 
-        const user: IUser | null = await User.findOne({
+        const user = (await User.findOne({
           accountNumber: credentials?.accountNum,
           email: credentials?.email,
-        });
+        }).populate({ path: "role", model: Role })) as IUser | null;
 
         if (!user) throw new Error(LOGIN_ERRORS.USER_DOES_NOT_EXIST);
 

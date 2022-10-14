@@ -1,7 +1,6 @@
 import bcrypt from "bcryptjs";
 import mongoose, { Schema } from "mongoose";
 
-import { UserRole } from "./config";
 import type { IUser, IUserSecurityQuestion } from "./types";
 
 export const UserSecurityQuestionSchema = new Schema<IUserSecurityQuestion>({
@@ -44,14 +43,9 @@ export const UserSchema = new Schema<IUser>(
       default: null,
     },
     role: {
-      type: String,
-      enum: [
-        UserRole.Superadmin,
-        UserRole.Stylist,
-        UserRole.Agency,
-        UserRole.Partner,
-      ],
-      default: UserRole.Stylist,
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "role",
+      required: true,
     },
     permission: {
       type: String,
@@ -63,6 +57,8 @@ export const UserSchema = new Schema<IUser>(
   },
   {
     timestamps: true,
+    toObject: { virtuals: true },
+    toJSON: { virtuals: true },
   }
 );
 

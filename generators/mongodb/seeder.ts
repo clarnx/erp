@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import { readFileSync } from "fs";
 import path from "path";
 
+import Role from "../../src/models/Role";
 import User from "../../src/models/User";
 import { mongoConnect } from "../../src/utils/middleware";
 
@@ -13,6 +14,10 @@ dotenv.config({ path: basePath + "/.env" });
 // Connect to DB
 
 // Read JSON files
+const roles = JSON.parse(
+  readFileSync(`${basePath}/public/fixtures/roles.json`, "utf-8")
+);
+
 const users = JSON.parse(
   readFileSync(`${basePath}/public/fixtures/users.json`, "utf-8")
 );
@@ -21,6 +26,7 @@ const users = JSON.parse(
 const importData = async () => {
   try {
     await mongoConnect();
+    await Role.create(roles);
     await User.create(users);
     console.log("Data Imported...");
     process.exit();
@@ -33,6 +39,7 @@ const importData = async () => {
 const deleteData = async () => {
   try {
     await mongoConnect();
+    await Role.deleteMany();
     await User.deleteMany();
     console.log("Data Destroyed...");
     process.exit();

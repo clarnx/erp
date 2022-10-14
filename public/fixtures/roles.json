@@ -1,0 +1,1394 @@
+[
+  {
+    "_id": "017a514b5d2c12c7449be049",
+    "roleName": "Admin",
+    "description": "Admin is the role with the highest level of access to your website. Admins can add content on all pages and access all items in the Admin Toolbar. They can add and delete other admin users, and can approve or deny edits made by authors.",
+    "permissions": [
+      {
+        "key": "ENTER A NEW REGULAR ORDER",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "REVIEW AN EXISTING ORDER",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "PICTURES OF ORDER DISPLAY OR PRINT",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "ADD & CANCEL ITEMS ON AN ORDER",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "ORDER STATUS",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "CLIENTS",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "ORDERS",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "CANCEL AN ENTIRE EXISTING ORDER",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "STYLE AVAILABILITY",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "CHANGE SHIP TO, VIA, OR NAME",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "RETAIL SALES HISTORY",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "ENTER A NEW SUPPLY ORDER",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "CHANGE E-MAIL ADDRESS",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "GIFT CARD",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "EXCHANGE FOR SIZE/DAMAGE",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "EXCHANGE FOR SIZE/DAMAGE",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "CHANGE E-MAIL ADDRESS & PASSWORD",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "ENTER 3 FOR ME ORDER",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "VIEW YOUR RANKING POSITION",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "ENTER NEW EARLY SELLING ORDER",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "DISPLAY BACK ORDERS",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "CUSTOMIZE RECEIPT HEADER/FOOTER",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "DISPLAY WAIT LISTED ORDERS",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "VIEW ORDERS BY STYLE",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "VIEW TODAY'S PICKS & SHIPS",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "VIEW RECENT SHIPMENTS",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "DISPLAYING CARTON UPS TRACKING",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "PLACE ORDERS ON VACATION HOLD",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "REBOOK UNIT",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "MANAGE CREDIT CARDS",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "PROCESS RETURNS",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      }
+    ]
+  },
+  {
+    "_id": "027a514b5d2c12c7449be049",
+    "roleName": "Stylist",
+    "description": "Stylist permissions",
+    "permissions": [
+      {
+        "key": "ENTER A NEW REGULAR ORDER",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "REVIEW AN EXISTING ORDER",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "PICTURES OF ORDER DISPLAY OR PRINT",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "ADD & CANCEL ITEMS ON AN ORDER",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "ORDER STATUS",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "CLIENTS",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "ORDERS",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "CANCEL AN ENTIRE EXISTING ORDER",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "STYLE AVAILABILITY",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "CHANGE SHIP TO, VIA, OR NAME",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "RETAIL SALES HISTORY",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "ENTER A NEW SUPPLY ORDER",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "CHANGE E-MAIL ADDRESS",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "GIFT CARD",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "EXCHANGE FOR SIZE/DAMAGE",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "EXCHANGE FOR SIZE/DAMAGE",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "CHANGE E-MAIL ADDRESS & PASSWORD",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "ENTER 3 FOR ME ORDER",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "VIEW YOUR RANKING POSITION",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "ENTER NEW EARLY SELLING ORDER",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "DISPLAY BACK ORDERS",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "CUSTOMIZE RECEIPT HEADER/FOOTER",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "DISPLAY WAIT LISTED ORDERS",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "VIEW ORDERS BY STYLE",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "VIEW TODAY'S PICKS & SHIPS",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "VIEW RECENT SHIPMENTS",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "DISPLAYING CARTON UPS TRACKING",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "PLACE ORDERS ON VACATION HOLD",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "REBOOK UNIT",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "MANAGE CREDIT CARDS",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "PROCESS RETURNS",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": true,
+          "canCancel": true,
+          "canDownload": true
+        }
+      }
+    ]
+  },
+  {
+    "_id": "037a514b5d2c12c7449be049",
+    "roleName": "Agency",
+    "description": "Agency permissions",
+    "permissions": [
+      {
+        "key": "ENTER A NEW REGULAR ORDER",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "REVIEW AN EXISTING ORDER",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "PICTURES OF ORDER DISPLAY OR PRINT",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "ADD & CANCEL ITEMS ON AN ORDER",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "ORDER STATUS",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "CLIENTS",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "ORDERS",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "CANCEL AN ENTIRE EXISTING ORDER",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "STYLE AVAILABILITY",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "CHANGE SHIP TO, VIA, OR NAME",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "RETAIL SALES HISTORY",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "ENTER A NEW SUPPLY ORDER",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "CHANGE E-MAIL ADDRESS",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "GIFT CARD",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "EXCHANGE FOR SIZE/DAMAGE",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "EXCHANGE FOR SIZE/DAMAGE",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "CHANGE E-MAIL ADDRESS & PASSWORD",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "ENTER 3 FOR ME ORDER",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "VIEW YOUR RANKING POSITION",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "ENTER NEW EARLY SELLING ORDER",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "DISPLAY BACK ORDERS",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "CUSTOMIZE RECEIPT HEADER/FOOTER",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "DISPLAY WAIT LISTED ORDERS",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "VIEW ORDERS BY STYLE",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "VIEW TODAY'S PICKS & SHIPS",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "VIEW RECENT SHIPMENTS",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "DISPLAYING CARTON UPS TRACKING",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "PLACE ORDERS ON VACATION HOLD",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "REBOOK UNIT",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "MANAGE CREDIT CARDS",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "PROCESS RETURNS",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      }
+    ]
+  },
+  {
+    "_id": "047a514b5d2c12c7449be049",
+    "roleName": "Partner",
+    "description": "Partner permissions",
+    "permissions": [
+      {
+        "key": "ENTER A NEW REGULAR ORDER",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "REVIEW AN EXISTING ORDER",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "PICTURES OF ORDER DISPLAY OR PRINT",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "ADD & CANCEL ITEMS ON AN ORDER",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "ORDER STATUS",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "CLIENTS",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "ORDERS",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "CANCEL AN ENTIRE EXISTING ORDER",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "STYLE AVAILABILITY",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "CHANGE SHIP TO, VIA, OR NAME",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "RETAIL SALES HISTORY",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "ENTER A NEW SUPPLY ORDER",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "CHANGE E-MAIL ADDRESS",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "GIFT CARD",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "EXCHANGE FOR SIZE/DAMAGE",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "EXCHANGE FOR SIZE/DAMAGE",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "CHANGE E-MAIL ADDRESS & PASSWORD",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "ENTER 3 FOR ME ORDER",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "VIEW YOUR RANKING POSITION",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "ENTER NEW EARLY SELLING ORDER",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "DISPLAY BACK ORDERS",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "CUSTOMIZE RECEIPT HEADER/FOOTER",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "DISPLAY WAIT LISTED ORDERS",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "VIEW ORDERS BY STYLE",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "VIEW TODAY'S PICKS & SHIPS",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "VIEW RECENT SHIPMENTS",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "DISPLAYING CARTON UPS TRACKING",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "PLACE ORDERS ON VACATION HOLD",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "REBOOK UNIT",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "MANAGE CREDIT CARDS",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      },
+      {
+        "key": "PROCESS RETURNS",
+        "value": {
+          "canView": true,
+          "canAdd": true,
+          "canUpdate": true,
+          "canDelete": false,
+          "canCancel": false,
+          "canDownload": true
+        }
+      }
+    ]
+  }
+]
