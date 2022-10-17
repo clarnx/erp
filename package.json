@@ -18,7 +18,8 @@
     "storybook": "BROWSER=none start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "data:import": "ts-node --project tsconfig.seeder.json generators/mongodb/seeder.ts -i",
-    "data:delete": "ts-node --project tsconfig.seeder.json generators/mongodb/seeder.ts -d"
+    "data:delete": "ts-node --project tsconfig.seeder.json generators/mongodb/seeder.ts -d",
+    "chromatic": "npx chromatic --project-token=53493d9912a7"
   },
   "dependencies": {
     "@next-auth/mongodb-adapter": "^1.1.1",
@@ -91,5 +92,7 @@
     "**/*.{json,css,scss,md}": [
       "prettier -w"
     ]
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "carlisle-frontend@0.1.0"
 }
