@@ -25,7 +25,7 @@ const Input: FC<InputProps> = ({
       <div
         className={clsxm(
           "flex w-full flex-grow appearance-none items-center",
-          "rounded-2xl border p-1 py-2 px-3 text-blackOut",
+          "rounded-[0.938rem] border p-1 py-2 px-3 text-blackOut",
           "focus-within:input-icon duration-150 focus-within:border-nero focus-within:transition-all sm:text-sm",
           value && "input-icon border border-nero",
           hasError && "border-poppySurprise",

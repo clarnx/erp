@@ -20,7 +20,7 @@ const Template: ComponentStory<typeof Input> = () => (
     value="example"
     required
     onChange={() => undefined}
-    className="relative block w-full border-transparent px-3 py-2 text-blackOut placeholder-shishaCoal focus:border-transparent focus:ring-0 sm:text-sm"
+    className="relative block w-full rounded-[0.938rem] border-transparent px-3 py-2 text-blackOut placeholder-shishaCoal focus:border-transparent focus:ring-0 sm:text-sm"
     placeholder="Account Number"
   />
 );

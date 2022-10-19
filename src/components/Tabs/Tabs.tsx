@@ -54,16 +54,17 @@ const Tabs: FC<TabProps> = ({ items }) => {
                       color={
                         link.isActive
                           ? "text-blackOut font-bold"
-                          : "text-improbable"
+                          : "text-improbable text-opacity-50"
                       }
-                      className="inline font-normal"
+                      className="inline font-bold"
                     >
                       {link.text}
                     </Typography>
                   </div>
                   <div
                     className={clsxm(
-                      link.isActive && "border-b-[0.738rem] border-blackOut "
+                      link.isActive &&
+                        "mt-[0.25rem] border-b-[0.438rem] border-blackOut"
                     )}
                   />
                 </li>

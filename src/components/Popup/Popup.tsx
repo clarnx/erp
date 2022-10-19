@@ -4,12 +4,13 @@ import { DEFAULT_POPUP } from "./config";
 import type { PopupProps } from "./types";
 import Button from "../Button";
 import Icon from "../Icon";
+import Typography from "../Typography";
 
 const Popup: FC<PopupProps> = ({ show, type = "normal", msg, icon }) => {
   const classNamePopupBody =
-    "bg-white border-[0.0625rem] border-beluga min-h-[13.9375rem] min-w-[23rem] absolute z-10 box-border flex flex-col items-start gap-[0.625rem] rounded-2xl border px-[2rem] pb-[3.125rem] pt-[2rem]";
+    "bg-white border-[0.0625rem] border-beluga h-[13.9375rem] w-[23rem] absolute z-10 box-border flex flex-col items-start gap-[0.625rem] rounded-2xl border px-[2rem] pb-[3.125rem] pt-[2rem]";
   const classNamePopupContent =
-    "min-w-[19rem] min-h-[8.8125rem] flex flex-col items-center gap-[2rem]";
+    "w-[19rem] h-[8.8125rem] flex flex-col items-center gap-[2rem]";
 
   return (
     <>
@@ -19,7 +20,14 @@ const Popup: FC<PopupProps> = ({ show, type = "normal", msg, icon }) => {
             <div className={classNamePopupContent}>
               {/* top content */}
               {type !== "warning" ? (
-                <span className="break-words font-primary">{msg}</span>
+                <Typography
+                  size="text-base"
+                  variant="span"
+                  fontFamily="font-tertiary"
+                  className="items-center leading-[1.813rem]"
+                >
+                  {msg}
+                </Typography>
               ) : (
                 icon &&
                 icon.src !== "" && (
@@ -27,31 +35,56 @@ const Popup: FC<PopupProps> = ({ show, type = "normal", msg, icon }) => {
                     src={icon.src}
                     height={icon.height ?? DEFAULT_POPUP.DEFAULT_ICON_HEIGHT}
                     width={icon.width ?? DEFAULT_POPUP.DEFAULT_ICON_WIDTH}
-                    className="inset-x-[42.43%] top-[22.42%] bottom-[46.56%]"
+                    className="inset-x-[42.43%] top-[22.42%] bottom-[46.56%] mt-[3.125rem]"
                   />
                 )
               )}
               {/* end of top content */}
 
               {/* bottom content */}
-              <div className="flex flex-row items-start gap-[1.25rem] pt-[2rem]">
+              <div className="flex flex-row items-start gap-[1.25rem]">
                 {type !== "warning" ? (
                   <>
                     <Button
+                      size="xs"
                       variant="primary"
-                      className="justify-center border-0 bg-disable text-shishaCoal hover:bg-disable hover:text-shishaCoal"
+                      className="justify-center rounded-[0.938rem] border-0 bg-disable text-shishaCoal hover:bg-disable hover:text-shishaCoal"
                     >
-                      Button
+                      <Typography
+                        size="text-base"
+                        variant="span"
+                        fontFamily="font-tertiary"
+                        className="items-center leading-[1.813rem]"
+                      >
+                        Button
+                      </Typography>
                     </Button>
                     <Button
+                      size="xs"
                       type="submit"
-                      className="justify-center border-0 text-white"
+                      className="justify-center rounded-[0.938rem] border-0"
                     >
-                      Button
+                      <Typography
+                        size="text-base"
+                        variant="span"
+                        color="white"
+                        fontFamily="font-tertiary"
+                        className="items-center leading-[1.813rem]"
+                      >
+                        Button
+                      </Typography>
                     </Button>
                   </>
                 ) : (
-                  <span className="font-primary"> {msg}</span>
+                  <Typography
+                    size="text-base"
+                    variant="span"
+                    color="white"
+                    fontFamily="font-tertiary"
+                    className="items-center font-bold leading-[1.813rem]"
+                  >
+                    {msg}
+                  </Typography>
                 )}
               </div>
               {/* end of bottom content */}
