@@ -28,6 +28,7 @@
     "bcryptjs": "^2.4.3",
     "clsx": "^1.2.1",
     "dotenv": "^16.0.3",
+    "express-validator": "^6.14.2",
     "formik": "^2.2.9",
     "mongoose": "^6.6.5",
     "next": "12.3.1",
