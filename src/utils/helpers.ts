@@ -2,6 +2,8 @@ import { AxiosError, AxiosRequestConfig } from "axios";
 
 import { ApiResponse, mongodbInstance } from "@/config";
 
+import logger from "./logger";
+
 export const capitalizeFirstLetter = (string: string) => {
   return string.charAt(0).toUpperCase() + string.slice(1);
 };
@@ -35,6 +37,8 @@ export async function onParseResponse<T>(args: AxiosRequestConfig<any>) {
   } catch (error) {
     const axiosError = error as AxiosError;
     const data = axiosError.response?.data as ApiResponse<T>;
+
+    logger(error);
 
     formattedResponse = data;
   }

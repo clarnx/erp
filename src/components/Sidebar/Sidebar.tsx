@@ -1,5 +1,7 @@
-import { signOut } from "next-auth/react";
+import { signOut, SignOutParams } from "next-auth/react";
 import React, { FC } from "react";
+
+import { AUTH_PAGE_URL } from "@/constants/pageUrl";
 
 import { links } from "./config";
 import SubItem from "./SubItem";
@@ -7,6 +9,10 @@ import Icon from "../Icon";
 import Typography from "../Typography";
 
 const Sidebar: FC = () => {
+  const signOutOptions: SignOutParams = {
+    callbackUrl: `${process.env.NEXT_PUBLIC_BASE_URL}${AUTH_PAGE_URL.LOGIN}`,
+  };
+
   return (
     <aside className="fixed top-0 left-0 " data-testid="sidebar">
       <div className="relative flex h-screen min-h-screen w-64 flex-col overflow-y-auto border-r bg-nero px-4 py-8">
@@ -34,7 +40,7 @@ const Sidebar: FC = () => {
           <div className="mt-auto">
             <button
               className="nav-link mt-[0.563rem] flex min-h-[2.875rem] w-full transform cursor-pointer items-center rounded-md px-4 py-2 capitalize text-whisper transition-colors duration-200 hover:bg-shishaCoal hover:text-superSilver"
-              onClick={() => signOut()}
+              onClick={() => signOut(signOutOptions)}
             >
               <Icon src="/svg/Logout.svg" height={19} width={19} />
 
