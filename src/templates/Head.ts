@@ -48,6 +48,10 @@ export const HeadTemplate = `
     margin-bottom: 2.75rem;
   }
 
+  .keep-it-safe {
+    font-weight: 700;
+  }
+
   .txt-primary {
     font-size: 1rem;
     color: #242254;
