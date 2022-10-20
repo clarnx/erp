@@ -99,6 +99,16 @@
       brightness(91%) contrast(91%);
   }
 
+  .icon-default {
+    filter: invert(0%) sepia(61%) saturate(96%) hue-rotate(190deg)
+      brightness(200%) contrast(80%);
+  }
+
+  .icon-active {
+    filter: invert(0%) sepia(2%) saturate(1250%) hue-rotate(158deg)
+      brightness(84%) contrast(80%);
+  }
+
   ::-webkit-scrollbar-track {
     background-color: var(--color-polar-drift);
   }

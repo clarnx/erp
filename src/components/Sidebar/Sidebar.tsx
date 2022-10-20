@@ -1,8 +1,6 @@
 import { signOut, SignOutParams } from "next-auth/react";
 import React, { FC } from "react";
 
-import { AUTH_PAGE_URL } from "@/constants/pageUrl";
-
 import { links } from "./config";
 import SubItem from "./SubItem";
 import Icon from "../Icon";
@@ -10,7 +8,7 @@ import Typography from "../Typography";
 
 const Sidebar: FC = () => {
   const signOutOptions: SignOutParams = {
-    callbackUrl: `${process.env.NEXT_PUBLIC_BASE_URL}${AUTH_PAGE_URL.LOGIN}`,
+    callbackUrl: process.env.NEXT_PUBLIC_BASE_URL,
   };
 
   return (
