@@ -2,6 +2,7 @@ import absoluteUrl from "next-absolute-url";
 import nextConnect from "next-connect";
 
 import ErrorHandler from "@/utils/errorHandler";
+import logger from "@/utils/logger";
 import { sendEmail } from "@/utils/sendEmail";
 
 import User from "@/models/User";
@@ -40,12 +41,15 @@ const forgotPassword = catchAsyncErrors(async (req, res, next) => {
       message: `Email sent to: ${user.email}`,
     });
   } catch (error) {
+    logger(error, "error log");
     const catchError = error as Error;
 
     user.resetPasswordToken = undefined;
     user.resetPasswordExpire = undefined;
 
     await user.save({ validateBeforeSave: false });
+
+    logger(catchError.message, "error log msg");
 
     return next(new ErrorHandler(catchError.message, 500));
   }
