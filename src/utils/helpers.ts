@@ -41,3 +41,6 @@ export async function onParseResponse<T>(args: AxiosRequestConfig<any>) {
 
   return formattedResponse;
 }
+
+// eslint-disable-next-line @typescript-eslint/no-empty-function
+export const noop = () => {};

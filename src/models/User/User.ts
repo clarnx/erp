@@ -20,7 +20,6 @@ export const UserSchema = new Schema<IUser>(
     accountNumber: {
       type: Number,
       required: true,
-      unique: true,
     },
     firstName: {
       type: String,
@@ -33,7 +32,6 @@ export const UserSchema = new Schema<IUser>(
     email: {
       type: String,
       required: true,
-      unique: true,
     },
     password: {
       type: String,

@@ -8,10 +8,11 @@ import { sendEmail } from "@/utils/sendEmail";
 import User from "@/models/User";
 import type { UserDetails } from "@/models/User/types";
 
+import { ResetPasswordTemplate } from "@/templates/ResetPassword";
+
 import { catchAsyncErrors } from "@/middlewares/catchAsyncErrors";
 import { onError } from "@/middlewares/errors";
 import { mongoHandler } from "@/middlewares/mongodb";
-import { ResetPasswordTemplate } from "@/templates/ResetPassword";
 
 const resetPassword = catchAsyncErrors(async (req, res, next) => {
   const { token } = req.query;

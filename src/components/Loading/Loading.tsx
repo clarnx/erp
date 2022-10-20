@@ -6,13 +6,19 @@ import clsxm from "@/utils/clsxm";
 import type { LoadingProps } from "./types";
 
 export const Loading: FC<LoadingProps> = (props) => {
-  const { fullscreen = true, size = 45, color = "#3d3a3a" } = props;
+  const {
+    fullscreen = true,
+    size = 45,
+    height = "h-screen",
+    color = "#3d3a3a",
+  } = props;
 
   return (
     <>
       <div
         className={clsxm(
-          fullscreen ? "flex h-screen items-center justify-center" : ""
+          fullscreen ? "flex items-center justify-center" : "",
+          height
         )}
         data-testid="loading"
       >

@@ -6,10 +6,11 @@ import { sendEmail } from "@/utils/sendEmail";
 
 import User from "@/models/User";
 
+import { ForgotPasswordTemplate } from "@/templates/ForgotPassword";
+
 import { catchAsyncErrors } from "@/middlewares/catchAsyncErrors";
 import { onError } from "@/middlewares/errors";
 import { mongoHandler } from "@/middlewares/mongodb";
-import { ForgotPasswordTemplate } from "@/templates/ForgotPassword";
 
 const forgotPassword = catchAsyncErrors(async (req, res, next) => {
   const user = await User.findOne({ email: req.body.email });

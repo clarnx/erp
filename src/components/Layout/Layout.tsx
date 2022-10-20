@@ -1,10 +1,14 @@
 import { useSession } from "next-auth/react";
 import { FC, Fragment, PropsWithChildren, useMemo } from "react";
 
+import { noop } from "@/utils/helpers";
+import { useRouteTracking } from "@/hooks";
+
 import { LayoutOptions } from "./config";
 import type { LayoutProps } from "./types";
 import Header from "../Header";
 import Icon from "../Icon";
+import Loading from "../Loading";
 import Sidebar from "../Sidebar";
 
 const Layout: FC<PropsWithChildren<LayoutProps>> = ({
@@ -13,6 +17,8 @@ const Layout: FC<PropsWithChildren<LayoutProps>> = ({
 }) => {
   const { status, data: session } = useSession();
 
+  const isRouteChange = useRouteTracking(noop, []);
+
   const renderContent = useMemo(() => {
     if (!session && mode === LayoutOptions.NotAuthenticated)
       return (
@@ -20,7 +26,7 @@ const Layout: FC<PropsWithChildren<LayoutProps>> = ({
           className="relative flex min-h-screen items-center justify-center py-12 px-4"
           data-testid="layout-unauthenticated"
         >
-          <div className="absolute top-[55px] left-[60px]">
+          <div className="absolute top-[3.438rem] left-[3.75rem]">
             <Icon
               src="/svg/Logo.svg"
               height={16}
@@ -46,12 +52,16 @@ const Layout: FC<PropsWithChildren<LayoutProps>> = ({
           <Sidebar />
 
           <main className="ml-64 flex-1" data-testid="content">
-            {children}
+            {isRouteChange ? (
+              <Loading height="h-[calc(100vh-108px)]" />
+            ) : (
+              children
+            )}
           </main>
         </div>
       </div>
     );
-  }, [children, mode, session, status]);
+  }, [children, mode, session, status, isRouteChange]);
 
   return <Fragment>{renderContent}</Fragment>;
 };
