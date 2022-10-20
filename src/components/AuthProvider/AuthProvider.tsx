@@ -4,7 +4,7 @@ import { FC, Fragment, PropsWithChildren, useEffect, useState } from "react";
 
 import { whitelistPaths } from "@/config";
 
-import { loginPath } from "@/constants/env";
+import { AUTH_PAGE_URL } from "@/constants/pageUrl";
 
 import Loading from "../Loading";
 
@@ -29,7 +29,7 @@ export const AuthProvider: FC<PropsWithChildren> = ({ children }) => {
     router.events.on("routeChangeError", handleStopChange);
 
     if (isAuthenticated) router.replace("/");
-    if (isNotAuthenticated) router.replace(loginPath);
+    if (isNotAuthenticated) router.replace(AUTH_PAGE_URL.LOGIN);
 
     return () => {
       router.events.off("routeChangeStart", handleStartChange);

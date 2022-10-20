@@ -3,9 +3,9 @@ import dotenv from "dotenv";
 import { readFileSync } from "fs";
 import path from "path";
 
+import { mongoConnect } from "../../src/middlewares/mongodb";
 import Role from "../../src/models/Role";
 import User from "../../src/models/User";
-import { mongoConnect } from "../../src/utils/middleware";
 
 const basePath = path.join(__dirname, "../../");
 

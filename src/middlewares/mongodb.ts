@@ -1,5 +1,6 @@
 import mongoose, { ConnectOptions } from "mongoose";
-import type { NextApiHandler, NextApiRequest, NextApiResponse } from "next";
+import type { NextApiRequest, NextApiResponse } from "next";
+import { NextHandler } from "next-connect";
 
 /**
  * Creates a new connection to the database if one is not already connected.
@@ -8,11 +9,17 @@ import type { NextApiHandler, NextApiRequest, NextApiResponse } from "next";
  * @returns callback handler with req and res params passed.
  */
 export const mongoHandler =
-  (handler: NextApiHandler) =>
-  async (req: NextApiRequest, res: NextApiResponse) => {
+  (
+    handler: (
+      req: NextApiRequest,
+      res: NextApiResponse<any>,
+      next: NextHandler
+    ) => void
+  ) =>
+  async (req: NextApiRequest, res: NextApiResponse, next: NextHandler) => {
     if (mongoose.connections[0].readyState) {
       // Use current db connection
-      return await handler(req, res);
+      return await handler(req, res, next);
     }
 
     // Use new db connection
@@ -20,7 +27,8 @@ export const mongoHandler =
       useNewUrlParser: true,
       useUnifiedTopology: true,
     } as ConnectOptions);
-    return await handler(req, res);
+
+    return await handler(req, res, next);
   };
 
 export const mongoConnect = () => {

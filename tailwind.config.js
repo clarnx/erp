@@ -43,6 +43,7 @@ module.exports = {
         azure: withOpacityValue("--tw-color-azure"),
         ebonyClay: withOpacityValue("--tw-color-ebony-clay"),
         cloudBurst: withOpacityValue("--tw-color-cloud-burst"),
+        rustOleum: withOpacityValue("--tw-color-rust-oleum"),
         white: "#fff",
       },
     },

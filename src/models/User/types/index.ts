@@ -17,8 +17,20 @@ export interface IUserDocument extends Document {
   permission?: string;
   securityQuestion?: IUserSecurityQuestion;
   status?: boolean;
+  resetPasswordToken?: string;
+  resetPasswordExpire?: Date;
 }
 
 export interface IUser extends IUserDocument {
   matchPassword(enteredPassword: string): boolean;
 }
+
+export type UserDetails = {
+  accountNumber: number;
+  email: string;
+  firstName: string;
+  lastName: string;
+  password: string;
+  securityQuestion: string;
+  securityAnswer: string;
+};

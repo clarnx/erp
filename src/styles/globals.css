@@ -26,6 +26,7 @@
   --tw-color-azure: 248 250 250;
   --tw-color-ebony-clay: 33 33 60;
   --tw-color-cloud-burst: 50 59 75;
+  --tw-color-rust-oleum: 36 34 84;
 
   --color-nero: rgb(var(--tw-color-nero)); /* #272425 */
   --color-improbable: rgb(var(--tw-color-improbable)); /* #6D7275 */
@@ -48,6 +49,7 @@
   --color-azure: rgb(var(--tw-color-azure)); /* #F8FAFA */
   --color-ebony-clay: rgb(var(--tw-color-ebony-clay)); /* #21213C */
   --color-cloud-burst: rgb(var(--tw-color-cloud-burst)); /* #323B4B */
+  --color-rust-oleum: rgb(var(--tw-color-rust-oleum)); /* #242254 */
 }
 
 @layer base {
@@ -103,6 +105,7 @@
 
   ::-webkit-scrollbar {
     width: 0.5rem;
+    height: 0.5rem;
     background-color: var(--color-polar-drift);
   }
 

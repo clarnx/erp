@@ -127,7 +127,7 @@ const LoginPage: NextPage = () => {
                 </a>
               </Link>
 
-              <Link href="/">
+              <Link href="/auth/forgot-password">
                 <a className="cursor-pointer font-secondary text-base font-medium text-improbable">
                   Forgot Password?
                 </a>

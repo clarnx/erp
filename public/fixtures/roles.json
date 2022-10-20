@@ -170,17 +170,6 @@
         }
       },
       {
-        "key": "EXCHANGE FOR SIZE/DAMAGE",
-        "value": {
-          "canView": true,
-          "canAdd": true,
-          "canUpdate": true,
-          "canDelete": true,
-          "canCancel": true,
-          "canDownload": true
-        }
-      },
-      {
         "key": "CHANGE E-MAIL ADDRESS & PASSWORD",
         "value": {
           "canView": true,
@@ -497,17 +486,6 @@
       },
       {
         "key": "GIFT CARD",
-        "value": {
-          "canView": true,
-          "canAdd": true,
-          "canUpdate": true,
-          "canDelete": true,
-          "canCancel": true,
-          "canDownload": true
-        }
-      },
-      {
-        "key": "EXCHANGE FOR SIZE/DAMAGE",
         "value": {
           "canView": true,
           "canAdd": true,
@@ -866,17 +844,6 @@
         }
       },
       {
-        "key": "EXCHANGE FOR SIZE/DAMAGE",
-        "value": {
-          "canView": true,
-          "canAdd": true,
-          "canUpdate": true,
-          "canDelete": false,
-          "canCancel": false,
-          "canDownload": true
-        }
-      },
-      {
         "key": "CHANGE E-MAIL ADDRESS & PASSWORD",
         "value": {
           "canView": true,
@@ -1193,17 +1160,6 @@
       },
       {
         "key": "GIFT CARD",
-        "value": {
-          "canView": true,
-          "canAdd": true,
-          "canUpdate": true,
-          "canDelete": false,
-          "canCancel": false,
-          "canDownload": true
-        }
-      },
-      {
-        "key": "EXCHANGE FOR SIZE/DAMAGE",
         "value": {
           "canView": true,
           "canAdd": true,

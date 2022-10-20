@@ -2,8 +2,6 @@ import { MongoDBAdapter } from "@next-auth/mongodb-adapter";
 import NextAuth, { type NextAuthOptions } from "next-auth";
 import CredentialProvider from "next-auth/providers/credentials";
 
-import { mongoConnect } from "@/utils/middleware";
-
 import clientPromise from "@/config/mongodb";
 
 import { LOGIN_ERRORS } from "@/pages/auth/login/config";
@@ -11,6 +9,8 @@ import { LOGIN_ERRORS } from "@/pages/auth/login/config";
 import Role from "@/models/Role";
 import User from "@/models/User";
 import type { IUser } from "@/models/User/types";
+
+import { mongoConnect } from "@/middlewares/mongodb";
 
 export const authOptions: NextAuthOptions = {
   providers: [

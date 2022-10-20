@@ -1,3 +1,17 @@
-import { loginPath } from "@/constants/env";
+import { AUTH_PAGE_URL } from "@/constants/pageUrl";
 
-export const whitelistPaths = [loginPath];
+const {
+  FORGOT_PASSWORD,
+  FORGOT_PASSWORD_SUCCESS,
+  LOGIN,
+  RESET_PASSWORD,
+  RESET_PASSWORD_SUCCESS,
+} = AUTH_PAGE_URL;
+
+export const whitelistPaths = [
+  LOGIN,
+  FORGOT_PASSWORD,
+  FORGOT_PASSWORD_SUCCESS,
+  RESET_PASSWORD,
+  RESET_PASSWORD_SUCCESS,
+];

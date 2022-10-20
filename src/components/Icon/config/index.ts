@@ -32,6 +32,12 @@ export const storyIcons: StoryIcon[] = [
     width: 21,
   },
   {
+    label: "EmailSent",
+    name: "/svg/EmailSent.svg",
+    height: 21,
+    width: 21,
+  },
+  {
     label: "SlashedEye",
     name: "/svg/SlashedEye.svg",
     height: 21,

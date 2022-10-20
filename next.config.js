@@ -15,7 +15,7 @@ const nextConfig = {
 
   swcMinify: true,
 
-  pageExtensions: ["page.ts", "page.tsx"],
+  pageExtensions: ["page.ts", "page.tsx", "api.ts"],
 
   // SVGR
   webpack(config, { webpack }) {

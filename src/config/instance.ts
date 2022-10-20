@@ -1,7 +1,7 @@
 import axios, { AxiosInstance } from "axios";
 
-const instance: AxiosInstance = axios.create({
-  baseURL: "INSERT ENDPOINT INSTANCE HERE",
+const mongodbInstance: AxiosInstance = axios.create({
+  baseURL: process.env.NEXT_BASE_URL,
 });
 
-export { instance };
+export { mongodbInstance };

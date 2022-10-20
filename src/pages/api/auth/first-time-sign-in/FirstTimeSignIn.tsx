@@ -1,9 +1,9 @@
 import { check, validationResult } from "express-validator";
 import { NextApiRequest, NextApiResponse } from "next";
 
-import { mongoConnect } from "@/utils/middleware";
-
 import User from "@/models/User";
+
+import { mongoConnect } from "@/middlewares/mongodb";
 
 import initMiddleware from "./helper/init-middleware";
 import validateMiddleware from "./helper/validate-middleware";

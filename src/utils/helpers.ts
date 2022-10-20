@@ -1,3 +1,7 @@
+import { AxiosError, AxiosRequestConfig } from "axios";
+
+import { ApiResponse, mongodbInstance } from "@/config";
+
 export const capitalizeFirstLetter = (string: string) => {
   return string.charAt(0).toUpperCase() + string.slice(1);
 };
@@ -20,3 +24,20 @@ export const camelize = (string: string) => {
     })
     .replace(/\s+/g, "");
 };
+
+export async function onParseResponse<T>(args: AxiosRequestConfig<any>) {
+  let formattedResponse: ApiResponse<T>;
+
+  try {
+    const { data } = await mongodbInstance({ ...args });
+
+    formattedResponse = data;
+  } catch (error) {
+    const axiosError = error as AxiosError;
+    const data = axiosError.response?.data as ApiResponse<T>;
+
+    formattedResponse = data;
+  }
+
+  return formattedResponse;
+}
