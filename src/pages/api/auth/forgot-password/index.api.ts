@@ -14,7 +14,10 @@ import { onError } from "@/middlewares/errors";
 import { mongoHandler } from "@/middlewares/mongodb";
 
 const forgotPassword = catchAsyncErrors(async (req, res, next) => {
-  const user = await User.findOne({ email: req.body.email });
+  
+  try {
+    
+   const user = await User.findOne({ email: req.body.email });
 
   if (!user) return next(new ErrorHandler("Email not found", 404));
 
@@ -29,7 +32,7 @@ const forgotPassword = catchAsyncErrors(async (req, res, next) => {
   // Create reset password url
   const resetUrl = `${origin}/auth/reset-password/${resetToken}`;
 
-  try {
+    
     await sendEmail({
       email: req.body.email,
       subject: "Carlisle Forgot Password",
