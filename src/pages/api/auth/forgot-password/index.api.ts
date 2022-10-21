@@ -14,10 +14,10 @@ import { onError } from "@/middlewares/errors";
 import { mongoHandler } from "@/middlewares/mongodb";
 
 const forgotPassword = catchAsyncErrors(async (req, res, next) => {
-  
+  let user;
   try {
     
-   const user = await User.findOne({ email: req.body.email });
+   user = await User.findOne({ email: req.body.email });
 
   if (!user) return next(new ErrorHandler("Email not found", 404));
 
